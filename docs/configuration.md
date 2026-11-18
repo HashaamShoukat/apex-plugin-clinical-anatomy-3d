@@ -1,4 +1,4 @@
-The standard component installer is generated at `dist/plugin-installer.sql`. Requires Oracle APEX 26.1 or later. Follow the README quick-install steps.
+The importable plug-in file is `plugin/item_type_plugin_com_hashaam_skeleton_3d.sql`. Requires Oracle APEX 26.1 or later. Follow the README install steps.
 
 Configure each page item's **Anatomy → Specialty** in APEX Builder. **Initial View** chooses the specialty default, Anatomy, Skeleton or Organs. Under **Options**, enable **Specialty Switch** to let users change presets, or disable it to use the configured specialty throughout that item.
 

@@ -10,7 +10,7 @@
     "test": "node qa/interact.mjs && node qa/anatomy.mjs && node qa/diagnoses.mjs && node qa/clinic.mjs && node qa/clinical-value.mjs && node qa/maintenance.mjs && node qa/workspace.mjs && node qa/complaints.mjs && node qa/regressions.mjs && node qa/improvements.mjs && node qa/compact-layout.mjs && node qa/patient-contract.mjs && node qa/patient-context.mjs && node qa/patient-summary.mjs && node qa/selection-details.mjs && node qa/publishing-fixes.mjs && node qa/review-fixes.mjs && node qa/layout-stress.mjs && node qa/review-1.8.mjs && node qa/shared-catalog.mjs && node qa/phone-first.mjs",
     "check:release": "node qa/release.mjs",
     "clean:qa": "node qa/clean-output.mjs",
-    "package": "node build.mjs && node package-release.mjs"
+    "package": "node build.mjs && node tools/package-release.mjs"
   },
   "devDependencies": {
     "esbuild": "^0.24.2",

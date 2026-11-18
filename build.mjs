@@ -9,7 +9,7 @@ import { AREAS, SPECIALTIES, DIAGNOSES, COMPLAINTS } from "./src/catalog.js";
 import { LIMITS } from './src/limits.js';
 import { OBSERVATION_PRESETS } from "./src/patient-contract.js";
 import { buildSkeleton } from "./src/model.js";
-import { packagePlugin } from "./package-plugin.mjs";
+import { packagePlugin } from "./tools/package-plugin.mjs";
 
 const VERSION = JSON.parse(readFileSync("package.json", "utf8")).version;
 const APP = process.env.APEX_APP_DIR ? process.env.APEX_APP_DIR.replace(/[\\/]+$/, "") + "/shared-components/plugins/item/skeleton3d" : null;
@@ -92,13 +92,16 @@ writeFileSync("dist/VERSION", VERSION + "\n");
 // The application build owns supporting scripts and package-body loaders.
 console.log("plugin.apx".padEnd(24), `PL/SQL ${plsql.length} chars`);
 packagePlugin(VERSION);
+// Importable plug-in file under the standard APEX export name, committed like the other plug-in repositories.
+copyFileSync('dist/plugin-installer.sql', 'plugin/item_type_plugin_com_hashaam_skeleton_3d.sql');
 
 // A release folder contains only explicitly selected public deliverables.
 const release = resolve('dist/release');
 if (release !== resolve('dist', 'release') || !release.startsWith(resolve('dist') + (process.platform === 'win32' ? '\\' : '/'))) { throw Error('Unexpected release path'); }
 rmSync(release, { recursive: true, force: true });
 mkdirSync(release + '/db', { recursive: true });
-copyFileSync('dist/plugin-installer.sql', release + '/plugin-installer.sql');
+mkdirSync(release + '/plugin', { recursive: true });
+copyFileSync('dist/plugin-installer.sql', release + '/plugin/item_type_plugin_com_hashaam_skeleton_3d.sql');
 for (const file of ['skeleton3d_pkg.sql','001_clinic_store.sql','002_demo_records.sql','003_relational_store.sql','install.sql']) { copyFileSync('dist/db/' + file, release + '/db/' + file); }
 for (const file of ['README.md','LICENSE','THIRD_PARTY_NOTICES.md','apexplugin.json']) { copyFileSync(file, release + '/' + file); }
 mkdirSync(release + '/docs/images',{recursive:true});

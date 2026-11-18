@@ -1,5 +1,10 @@
 /node_modules/
-/dist/
+# dist/ is committed (built browser assets and database packages); these parts are generated per release only
+/dist/release/
+/dist/*.zip
+/dist/*.zip.sha256
+/dist/*.map
+/dist/plugin-installer.sql
 /qa/out/
 *.log
 .env

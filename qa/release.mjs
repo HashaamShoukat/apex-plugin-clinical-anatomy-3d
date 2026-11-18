@@ -30,6 +30,7 @@ assert.deepEqual(Object.fromEntries(files('.',new Set(['node_modules','dist','ou
 console.log('ok   two builds produce identical output and leave sources unchanged');
 
 const installer=read('dist/plugin-installer.sql');
+assert.equal(read('plugin/item_type_plugin_com_hashaam_skeleton_3d.sql'),installer,'Committed plug-in file matches the build');
 const ids=JSON.parse(read('plugin/component-ids.json'));
 const version=JSON.parse(read('package.json')).version;
 assert.ok(installer.includes("p_version_identifier=>'"+version+"'"));
@@ -95,7 +96,7 @@ assert.match(payload,/l_terms.get_size<=100/);
 assert.match(payload,/check_text\(l_answer,'value',2000\)/);
 console.log('ok   callback source guards cover headers, script escaping, service errors and authorization reuse');
 
-const allowed=new Set(['README.md','LICENSE','THIRD_PARTY_NOTICES.md','apexplugin.json','plugin-installer.sql']);
+const allowed=new Set(['README.md','LICENSE','THIRD_PARTY_NOTICES.md','apexplugin.json','plugin/item_type_plugin_com_hashaam_skeleton_3d.sql']);
 for(const file of files('dist/release')) {
     const relative=path.relative('dist/release',file).replaceAll('\\','/');
     assert.ok(allowed.has(relative)||relative.startsWith('db/')||relative.startsWith('docs/')||relative.startsWith('debug/'),'Unexpected release file '+relative);

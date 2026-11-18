@@ -5,11 +5,11 @@ import {spawnSync} from 'node:child_process';
 const version=JSON.parse(fs.readFileSync('package.json','utf8')).version;
 if(!/^\d+\.\d+\.\d+$/.test(version))throw Error('Invalid release version');
 const release=path.resolve('dist/release'),archive=path.resolve('dist/clinical-anatomy-3d-'+version+'.zip');
-if(!fs.existsSync(release+'/plugin-installer.sql'))throw Error('Run the build first');
+if(!fs.existsSync(release+'/plugin/item_type_plugin_com_hashaam_skeleton_3d.sql'))throw Error('Run the build first');
 let result;
 if(process.platform==='win32'){
  const quote=value=>"'"+value.replaceAll("'","''")+"'";
- const command="& ([scriptblock]::Create([IO.File]::ReadAllText("+quote(path.resolve('package-release.ps1'))+"))) -Version "+quote(version)+" -ProjectPath "+quote(process.cwd());
+ const command="& ([scriptblock]::Create([IO.File]::ReadAllText("+quote(path.resolve('tools/package-release.ps1'))+"))) -Version "+quote(version)+" -ProjectPath "+quote(process.cwd());
  result=spawnSync('powershell.exe',['-NoProfile','-NonInteractive','-Command',command],{encoding:'utf8'});
 }else{
  if(fs.existsSync(archive))fs.unlinkSync(archive);

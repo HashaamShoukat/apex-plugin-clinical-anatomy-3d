@@ -2,7 +2,11 @@ param([Parameter(Mandatory=$true)][ValidatePattern('^\d+\.\d+\.\d+$')][string]$V
 $ErrorActionPreference='Stop'
 $releasePath=Join-Path $ProjectPath 'dist\release'
 $archivePath=Join-Path $ProjectPath ('dist\clinical-anatomy-3d-'+$Version+'.zip')
-Compress-Archive -Path (Join-Path $releasePath '*') -DestinationPath $archivePath -Force
+if (Test-Path -LiteralPath $archivePath) { Remove-Item -LiteralPath $archivePath -Force }
+# tar.exe (bsdtar) writes standard ZIP entry names with forward slashes; Compress-Archive in PowerShell 5.1 writes backslashes.
+$items=@(Get-ChildItem -LiteralPath $releasePath | ForEach-Object { $_.Name })
+& (Join-Path $env:SystemRoot 'System32\tar.exe') -a -c -f $archivePath -C $releasePath @items
+if ($LASTEXITCODE -ne 0) { throw 'tar.exe could not create the archive' }
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $releaseZip=[IO.Compression.ZipFile]::OpenRead($archivePath)
 try {

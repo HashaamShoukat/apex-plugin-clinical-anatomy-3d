@@ -1,4 +1,4 @@
-# Clinical Anatomy 3D
+# Clinical Anatomy 3D for Oracle APEX
 
 Oracle APEX item plug-in with schematic 3D anatomy, ten specialty presets, clinical findings, table-backed diagnosis and complaint catalogs, and configurable examination forms.
 
@@ -23,21 +23,18 @@ Requires **Oracle APEX 26.1 or later**. The installer targets APEX 26.1 APIs. We
 
 ![Neon viewer](docs/images/neon-viewer.png)
 
-## Quick install
+## Install
 
-A ready-made build is attached to each [GitHub release](../../releases) (`clinical-anatomy-3d-<version>.zip` with its SHA-256 file). Unzip it and start at step 2. To build it yourself:
+1. **Database objects.** As the application's parsing schema run `@db/install.sql`. It creates the package `SKELETON3D_PKG` (the plug-in's render, Ajax and validation callbacks), the shared complaint / diagnosis catalog and the examination tables. Safe to run again. For the 3D body only - no diagnoses, complaints or examination - `@db/skeleton3d_pkg.sql` is enough.
+2. **Plug-in.** Shared Components > Plug-ins > Import `plugin/item_type_plugin_com_hashaam_skeleton_3d.sql` (also attached to the [release](https://github.com/HashaamShoukat/apex-plugin-clinical-anatomy-3d/releases)).
 
-1. Run `npm ci` and `npm run build` from this directory. The public installation files are generated in `dist/release/`. Run `npm run package` to also create the versioned ZIP and SHA-256 file in `dist/`. The installer includes minified runtime assets only; the optional JavaScript source map is in `dist/release/debug/` for manual attachment in developer tools.
-2. Connect SQLcl or SQL*Plus to the application's parsing schema. From `dist/release/`, run `@db/install.sql` to install the callbacks, clinic API and clinic tables. For basic anatomy without diagnoses, complaints, examinations or clinic maintenance, `@db/skeleton3d_pkg.sql` installs only the callbacks. The shared catalogue needs `@db/install.sql`. Neither entry point installs the sample patient storage tables.
-3. In APEX Builder, open the destination application, choose Shared Components, Plug-ins, Import, and select `dist/release/plugin-installer.sql`.
-4. Create a page item of type **Clinical Anatomy 3D**. Choose the specialty and initial view. Use CLOB session state and a CLOB database column for larger records. Enable diagnosis suggestions, complaints or examinations after installing the shared API.
-5. Save the item's JSON through the host application's normal save process. Apply server-side validations to the application's save requests. Configure Cancel and other navigation buttons to skip validation as appropriate for the application.
+Then add a page item of type **Clinical Anatomy 3D** with CLOB session state, pick the specialty and the initial view, and save the item's value into a CLOB column with your page's normal save process. Apply your own server-side validations and patient / encounter authorization to that save.
 
-SQL imports through SQLcl require the destination workspace, application and parsing schema to be set with `apex_application_install` before running the component installer. Builder supplies the selected application context.
+The internal name is `COM.HASHAAM.SKELETON_3D`; the callbacks are in `SKELETON3D_PKG`. The optional scripts `@db/002_demo_records.sql` (demo record storage) and `@db/003_relational_store.sql` (relational storage example) are not needed for the plug-in. Importing the plug-in with SQLcl instead of Builder needs `apex_application_install` to set the workspace, application and parsing schema first.
 
 ## Development
 
-`npm run build` generates browser bundles, database packages, APEXlang definitions, and a portable component installer under `dist/`. The SQL entry points in `db/` delegate to generated packages. Source templates live in `src/` and `plugin/`.
+`npm ci` then `npm run build` regenerates the browser bundles and database packages in `dist/`, the APEXlang definition and the importable `plugin/item_type_plugin_com_hashaam_skeleton_3d.sql` (all committed). The SQL entry points in `db/` run the generated packages in `dist/db/`. Source lives in `src/` and `plugin/`; build helpers in `tools/`. `npm run package` also writes `dist/release/` and the versioned ZIP with its SHA-256 file; the JavaScript source map is in its `debug/` folder.
 
 `npm test` runs the browser and contract regression suites, including repeated layout and neon-color transitions. Set QA_BROWSER=firefox or QA_BROWSER=webkit when running node qa/layout-stress.mjs to exercise those engines after installing their Playwright browsers. `npm run check:release` builds twice, checks source immutability and deterministic outputs, verifies installer metadata/assets, and scans the release for internal deployment details.
 
