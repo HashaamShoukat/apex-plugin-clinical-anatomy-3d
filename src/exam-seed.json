@@ -1,0 +1,312 @@
+{
+  "key": "GENERAL",
+  "version": 1,
+  "title": "Initial general examination",
+  "profile": "GENERAL_EXAM_2026_2",
+  "allowDeferred": true,
+  "fields": [
+    {
+      "id": "bp_systolic",
+      "section": "vitals",
+      "label": "Systolic blood pressure",
+      "type": "number",
+      "unit": "mmHg",
+      "min": 0,
+      "max": 400
+    },
+    {
+      "id": "bp_diastolic",
+      "section": "vitals",
+      "label": "Diastolic blood pressure",
+      "type": "number",
+      "unit": "mmHg",
+      "min": 0,
+      "max": 300
+    },
+    {
+      "id": "pulse",
+      "section": "vitals",
+      "label": "Pulse",
+      "type": "number",
+      "unit": "beats/min",
+      "min": 0,
+      "max": 400
+    },
+    {
+      "id": "respiratory_rate",
+      "section": "vitals",
+      "label": "Respiratory rate",
+      "type": "number",
+      "unit": "breaths/min",
+      "min": 0,
+      "max": 200
+    },
+    {
+      "id": "temperature",
+      "section": "vitals",
+      "label": "Temperature",
+      "type": "number",
+      "unit": "°C",
+      "min": 20,
+      "max": 50
+    },
+    {
+      "id": "spo2",
+      "section": "vitals",
+      "label": "Oxygen saturation",
+      "type": "number",
+      "unit": "%",
+      "min": 0,
+      "max": 100
+    },
+    {
+      "id": "weight",
+      "section": "vitals",
+      "label": "Weight",
+      "type": "number",
+      "unit": "kg",
+      "min": 0,
+      "max": 1000
+    },
+    {
+      "id": "height",
+      "section": "vitals",
+      "label": "Height",
+      "type": "number",
+      "unit": "cm",
+      "min": 0,
+      "max": 300
+    },
+    {
+      "id": "general",
+      "label": "General appearance & condition",
+      "section": "examination",
+      "type": "assessment",
+      "required": true,
+      "noteRequiredFor": [
+        "ABNORMAL"
+      ]
+    },
+    {
+      "id": "cardiovascular",
+      "label": "Cardiovascular",
+      "section": "examination",
+      "type": "assessment",
+      "required": true,
+      "noteRequiredFor": [
+        "ABNORMAL"
+      ]
+    },
+    {
+      "id": "respiratory",
+      "label": "Respiratory",
+      "section": "examination",
+      "type": "assessment",
+      "required": true,
+      "noteRequiredFor": [
+        "ABNORMAL"
+      ]
+    },
+    {
+      "id": "abdomen",
+      "label": "Abdominal",
+      "section": "examination",
+      "type": "assessment",
+      "required": true,
+      "noteRequiredFor": [
+        "ABNORMAL"
+      ]
+    },
+    {
+      "id": "neurological",
+      "label": "Neurological",
+      "section": "examination",
+      "type": "assessment",
+      "required": true,
+      "noteRequiredFor": [
+        "ABNORMAL"
+      ]
+    },
+    {
+      "id": "pain_screen",
+      "section": "screening",
+      "label": "Pain screening",
+      "type": "select",
+      "options": [
+        {
+          "value": "NO_PAIN",
+          "label": "No pain"
+        },
+        {
+          "value": "PAIN_PRESENT",
+          "label": "Pain present"
+        },
+        {
+          "value": "UNABLE_TO_REPORT",
+          "label": "Unable to self-report"
+        }
+      ],
+      "required": true,
+      "noteRequiredFor": [
+        "PAIN_PRESENT",
+        "UNABLE_TO_REPORT"
+      ]
+    },
+    {
+      "id": "nutrition",
+      "label": "Nutrition screening",
+      "section": "screening",
+      "type": "select",
+      "options": [
+        {
+          "value": "NO_RISK",
+          "label": "No risk identified"
+        },
+        {
+          "value": "RISK_IDENTIFIED",
+          "label": "Risk identified"
+        },
+        {
+          "value": "NOT_APPLICABLE",
+          "label": "Not applicable"
+        }
+      ],
+      "required": true,
+      "noteRequiredFor": [
+        "RISK_IDENTIFIED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    {
+      "id": "function",
+      "label": "Function, mobility & daily activities",
+      "section": "screening",
+      "type": "select",
+      "options": [
+        {
+          "value": "NO_RISK",
+          "label": "No risk identified"
+        },
+        {
+          "value": "RISK_IDENTIFIED",
+          "label": "Risk identified"
+        },
+        {
+          "value": "NOT_APPLICABLE",
+          "label": "Not applicable"
+        }
+      ],
+      "required": true,
+      "noteRequiredFor": [
+        "RISK_IDENTIFIED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    {
+      "id": "falls",
+      "label": "Fall risk screening",
+      "section": "screening",
+      "type": "select",
+      "options": [
+        {
+          "value": "NO_RISK",
+          "label": "No risk identified"
+        },
+        {
+          "value": "RISK_IDENTIFIED",
+          "label": "Risk identified"
+        },
+        {
+          "value": "NOT_APPLICABLE",
+          "label": "Not applicable"
+        }
+      ],
+      "required": true,
+      "noteRequiredFor": [
+        "RISK_IDENTIFIED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    {
+      "id": "psychological",
+      "label": "Psychological & emotional needs",
+      "section": "screening",
+      "type": "select",
+      "options": [
+        {
+          "value": "NO_RISK",
+          "label": "No risk identified"
+        },
+        {
+          "value": "RISK_IDENTIFIED",
+          "label": "Risk identified"
+        },
+        {
+          "value": "NOT_APPLICABLE",
+          "label": "Not applicable"
+        }
+      ],
+      "required": true,
+      "noteRequiredFor": [
+        "RISK_IDENTIFIED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    {
+      "id": "social",
+      "label": "Social, economic & support needs",
+      "section": "screening",
+      "type": "select",
+      "options": [
+        {
+          "value": "NO_RISK",
+          "label": "No risk identified"
+        },
+        {
+          "value": "RISK_IDENTIFIED",
+          "label": "Risk identified"
+        },
+        {
+          "value": "NOT_APPLICABLE",
+          "label": "Not applicable"
+        }
+      ],
+      "required": true,
+      "noteRequiredFor": [
+        "RISK_IDENTIFIED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    {
+      "id": "cultural",
+      "label": "Cultural, spiritual & communication needs",
+      "section": "screening",
+      "type": "select",
+      "options": [
+        {
+          "value": "NO_RISK",
+          "label": "No risk identified"
+        },
+        {
+          "value": "RISK_IDENTIFIED",
+          "label": "Risk identified"
+        },
+        {
+          "value": "NOT_APPLICABLE",
+          "label": "Not applicable"
+        }
+      ],
+      "required": true,
+      "noteRequiredFor": [
+        "RISK_IDENTIFIED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    {
+      "id": "screening_tools",
+      "section": "screening",
+      "label": "Screening tool names, scores & referrals",
+      "type": "textarea"
+    }
+  ]
+}

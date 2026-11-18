@@ -1,0 +1,23 @@
+{
+  "name": "apex-plugin-skeleton-3d",
+  "version": "1.9.0",
+  "private": true,
+  "description": "Oracle APEX item plug-in with interactive 3D anatomy, organs, skeleton and clinical specialty presets",
+  "license": "MIT",
+  "author": "Hashaam Shoukat (https://github.com/HashaamShoukat)",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node qa/interact.mjs && node qa/anatomy.mjs && node qa/diagnoses.mjs && node qa/clinic.mjs && node qa/clinical-value.mjs && node qa/maintenance.mjs && node qa/workspace.mjs && node qa/complaints.mjs && node qa/regressions.mjs && node qa/improvements.mjs && node qa/compact-layout.mjs && node qa/patient-contract.mjs && node qa/patient-context.mjs && node qa/patient-summary.mjs && node qa/selection-details.mjs && node qa/publishing-fixes.mjs && node qa/review-fixes.mjs && node qa/layout-stress.mjs && node qa/review-1.8.mjs && node qa/shared-catalog.mjs && node qa/phone-first.mjs",
+    "check:release": "node qa/release.mjs",
+    "clean:qa": "node qa/clean-output.mjs",
+    "package": "node build.mjs && node package-release.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2",
+    "jquery": "3.7.1",
+    "playwright-core": "1.49.1",
+    "three": "0.170.0",
+    "three-mesh-bvh": "0.8.3"
+  },
+  "type": "module"
+}

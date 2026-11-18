@@ -1,0 +1,9 @@
+file "css/skeleton3d.min.css" (
+    mimeType: text/css
+    charSet: utf-8
+)
+
+file "js/skeleton3d.min.js" (
+    mimeType: application/javascript
+    charSet: utf-8
+)

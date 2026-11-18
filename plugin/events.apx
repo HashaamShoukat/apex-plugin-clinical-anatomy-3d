@@ -1,0 +1,7 @@
+event skeleton3dselect (
+    name: Site Marked
+)
+
+event skeleton3dchange (
+    name: Marks Changed
+)

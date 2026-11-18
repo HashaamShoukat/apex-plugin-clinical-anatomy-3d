@@ -1,0 +1,3751 @@
+{
+  "diagnoses": [
+    {
+      "code": "R51",
+      "label": "Headache",
+      "areas": [
+        "HEAD"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G43.9",
+      "label": "Migraine, unspecified",
+      "areas": [
+        "HEAD",
+        "BRAIN"
+      ],
+      "k": "headache",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G43.0",
+      "label": "Migraine without aura [common migraine]",
+      "areas": [
+        "HEAD"
+      ],
+      "k": "headache",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G43.1",
+      "label": "Migraine with aura [classical migraine]",
+      "areas": [
+        "HEAD"
+      ],
+      "k": "headache",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G44.2",
+      "label": "Tension-type headache",
+      "areas": [
+        "HEAD"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G44.0",
+      "label": "Cluster headache syndrome",
+      "areas": [
+        "HEAD"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G44.3",
+      "label": "Chronic post-traumatic headache",
+      "areas": [
+        "HEAD"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G44.4",
+      "label": "Drug-induced headache, not elsewhere classified",
+      "areas": [
+        "HEAD"
+      ],
+      "k": "medication overuse",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S06.0",
+      "label": "Concussion",
+      "areas": [
+        "HEAD",
+        "BRAIN"
+      ],
+      "k": "head injury",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S00.0",
+      "label": "Superficial injury of scalp",
+      "areas": [
+        "HEAD"
+      ],
+      "k": "head injury bruise",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S02.0",
+      "label": "Fracture of vault of skull",
+      "areas": [
+        "HEAD"
+      ],
+      "k": "skull fracture frontal parietal",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S02.1",
+      "label": "Fracture of base of skull",
+      "areas": [
+        "HEAD"
+      ],
+      "k": "skull fracture occipital temporal sphenoid",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S09.9",
+      "label": "Unspecified injury of head",
+      "areas": [
+        "HEAD"
+      ],
+      "k": "head injury",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S02.2",
+      "label": "Fracture of nasal bones",
+      "areas": [
+        "FACE"
+      ],
+      "k": "broken nose",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S02.3",
+      "label": "Fracture of orbital floor",
+      "areas": [
+        "FACE"
+      ],
+      "k": "eye socket blow-out",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S02.4",
+      "label": "Fracture of malar and maxillary bones",
+      "areas": [
+        "FACE"
+      ],
+      "k": "cheekbone zygomatic zygoma",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S02.7",
+      "label": "Multiple fractures involving skull and facial bones",
+      "areas": [
+        "FACE",
+        "HEAD"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G50.0",
+      "label": "Trigeminal neuralgia",
+      "areas": [
+        "FACE"
+      ],
+      "k": "face pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G50.1",
+      "label": "Atypical facial pain",
+      "areas": [
+        "FACE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J01.9",
+      "label": "Acute sinusitis, unspecified",
+      "areas": [
+        "FACE",
+        "NOSE"
+      ],
+      "k": "sinus",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J32.9",
+      "label": "Chronic sinusitis, unspecified",
+      "areas": [
+        "FACE",
+        "NOSE"
+      ],
+      "k": "sinus",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K07.6",
+      "label": "Temporomandibular joint disorders",
+      "areas": [
+        "JAW"
+      ],
+      "k": "tmj jaw pain clicking",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S02.6",
+      "label": "Fracture of mandible",
+      "areas": [
+        "JAW"
+      ],
+      "k": "broken jaw",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S03.0",
+      "label": "Dislocation of jaw",
+      "areas": [
+        "JAW"
+      ],
+      "k": "tmj",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M54.2",
+      "label": "Cervicalgia",
+      "areas": [
+        "NECK"
+      ],
+      "k": "neck pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M47.8",
+      "label": "Other spondylosis",
+      "areas": [
+        "NECK",
+        "UPPER_BACK",
+        "LOWER_BACK"
+      ],
+      "k": "cervical spondylosis lumbar spondylosis degenerative",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M50.1",
+      "label": "Cervical disc disorder with radiculopathy",
+      "areas": [
+        "NECK"
+      ],
+      "k": "slipped disc arm pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M50.2",
+      "label": "Other cervical disc displacement",
+      "areas": [
+        "NECK"
+      ],
+      "k": "slipped disc herniation",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M50.3",
+      "label": "Other cervical disc degeneration",
+      "areas": [
+        "NECK"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M53.0",
+      "label": "Cervicocranial syndrome",
+      "areas": [
+        "NECK",
+        "HEAD"
+      ],
+      "k": "cervicogenic headache",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M53.1",
+      "label": "Cervicobrachial syndrome",
+      "areas": [
+        "NECK",
+        "SHOULDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M43.6",
+      "label": "Torticollis",
+      "areas": [
+        "NECK"
+      ],
+      "k": "wry neck stiff neck",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S13.4",
+      "label": "Sprain and strain of cervical spine",
+      "areas": [
+        "NECK"
+      ],
+      "k": "whiplash",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S12.0",
+      "label": "Fracture of first cervical vertebra",
+      "areas": [
+        "NECK"
+      ],
+      "k": "atlas C1",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S12.1",
+      "label": "Fracture of second cervical vertebra",
+      "areas": [
+        "NECK"
+      ],
+      "k": "axis C2 odontoid",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S12.2",
+      "label": "Fracture of other specified cervical vertebra",
+      "areas": [
+        "NECK"
+      ],
+      "k": "C3 C4 C5 C6 C7",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M75.0",
+      "label": "Adhesive capsulitis of shoulder",
+      "areas": [
+        "SHOULDER"
+      ],
+      "k": "frozen shoulder",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M75.1",
+      "label": "Rotator cuff syndrome",
+      "areas": [
+        "SHOULDER"
+      ],
+      "k": "supraspinatus tear",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M75.2",
+      "label": "Bicipital tendinitis",
+      "areas": [
+        "SHOULDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M75.3",
+      "label": "Calcific tendinitis of shoulder",
+      "areas": [
+        "SHOULDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M75.4",
+      "label": "Impingement syndrome of shoulder",
+      "areas": [
+        "SHOULDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M75.5",
+      "label": "Bursitis of shoulder",
+      "areas": [
+        "SHOULDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M19.0",
+      "label": "Primary arthrosis of other joints",
+      "areas": [
+        "SHOULDER",
+        "ELBOW",
+        "WRIST",
+        "ANKLE"
+      ],
+      "k": "osteoarthritis",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S42.0",
+      "label": "Fracture of clavicle",
+      "areas": [
+        "SHOULDER"
+      ],
+      "k": "collarbone",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S42.1",
+      "label": "Fracture of scapula",
+      "areas": [
+        "SHOULDER"
+      ],
+      "k": "shoulder blade",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S42.2",
+      "label": "Fracture of upper end of humerus",
+      "areas": [
+        "SHOULDER"
+      ],
+      "k": "proximal humerus surgical neck",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S43.0",
+      "label": "Dislocation of shoulder joint",
+      "areas": [
+        "SHOULDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S43.1",
+      "label": "Dislocation of acromioclavicular joint",
+      "areas": [
+        "SHOULDER"
+      ],
+      "k": "AC joint",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S46.0",
+      "label": "Injury of muscle(s) and tendon(s) of the rotator cuff of shoulder",
+      "areas": [
+        "SHOULDER"
+      ],
+      "k": "tear",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M24.4",
+      "label": "Recurrent dislocation and subluxation of joint",
+      "areas": [
+        "SHOULDER",
+        "KNEE"
+      ],
+      "k": "instability",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S42.3",
+      "label": "Fracture of shaft of humerus",
+      "areas": [
+        "UPPER_ARM"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S46.1",
+      "label": "Injury of muscle and tendon of long head of biceps",
+      "areas": [
+        "UPPER_ARM"
+      ],
+      "k": "biceps rupture",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M79.6",
+      "label": "Pain in limb",
+      "areas": [
+        "UPPER_ARM",
+        "FOREARM",
+        "THIGH",
+        "LOWER_LEG",
+        "HAND",
+        "FOOT"
+      ],
+      "k": "arm pain leg pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M77.1",
+      "label": "Lateral epicondylitis",
+      "areas": [
+        "ELBOW"
+      ],
+      "k": "tennis elbow",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M77.0",
+      "label": "Medial epicondylitis",
+      "areas": [
+        "ELBOW"
+      ],
+      "k": "golfer's elbow",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M70.2",
+      "label": "Olecranon bursitis",
+      "areas": [
+        "ELBOW"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G56.2",
+      "label": "Lesion of ulnar nerve",
+      "areas": [
+        "ELBOW",
+        "HAND"
+      ],
+      "k": "cubital tunnel",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S42.4",
+      "label": "Fracture of lower end of humerus",
+      "areas": [
+        "ELBOW"
+      ],
+      "k": "supracondylar",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S52.0",
+      "label": "Fracture of upper end of ulna",
+      "areas": [
+        "ELBOW"
+      ],
+      "k": "olecranon",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S52.1",
+      "label": "Fracture of upper end of radius",
+      "areas": [
+        "ELBOW"
+      ],
+      "k": "radial head",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S53.1",
+      "label": "Dislocation of elbow, unspecified",
+      "areas": [
+        "ELBOW"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S53.4",
+      "label": "Sprain and strain of elbow",
+      "areas": [
+        "ELBOW"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S52.2",
+      "label": "Fracture of shaft of ulna",
+      "areas": [
+        "FOREARM"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S52.3",
+      "label": "Fracture of shaft of radius",
+      "areas": [
+        "FOREARM"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S52.4",
+      "label": "Fracture of shafts of both ulna and radius",
+      "areas": [
+        "FOREARM"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G56.0",
+      "label": "Carpal tunnel syndrome",
+      "areas": [
+        "WRIST",
+        "HAND"
+      ],
+      "k": "median nerve numb fingers",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M65.4",
+      "label": "Radial styloid tenosynovitis [de Quervain]",
+      "areas": [
+        "WRIST"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M67.4",
+      "label": "Ganglion",
+      "areas": [
+        "WRIST",
+        "HAND",
+        "FOOT"
+      ],
+      "k": "cyst",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S52.5",
+      "label": "Fracture of lower end of radius",
+      "areas": [
+        "WRIST"
+      ],
+      "k": "colles smith distal radius",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S52.6",
+      "label": "Fracture of lower end of both ulna and radius",
+      "areas": [
+        "WRIST"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S62.0",
+      "label": "Fracture of navicular [scaphoid] bone of hand",
+      "areas": [
+        "WRIST"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S62.1",
+      "label": "Fracture of other carpal bone(s)",
+      "areas": [
+        "WRIST"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S63.5",
+      "label": "Sprain and strain of wrist",
+      "areas": [
+        "WRIST"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M18.9",
+      "label": "Arthrosis of first carpometacarpal joint, unspecified",
+      "areas": [
+        "HAND"
+      ],
+      "k": "thumb base osteoarthritis",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M65.3",
+      "label": "Trigger finger",
+      "areas": [
+        "HAND"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M72.0",
+      "label": "Palmar fascial fibromatosis [Dupuytren]",
+      "areas": [
+        "HAND"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M06.9",
+      "label": "Rheumatoid arthritis, unspecified",
+      "areas": [
+        "HAND",
+        "WRIST",
+        "FOOT",
+        "KNEE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M15.1",
+      "label": "Heberden's nodes (with arthropathy)",
+      "areas": [
+        "HAND"
+      ],
+      "k": "finger osteoarthritis",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S62.2",
+      "label": "Fracture of first metacarpal bone",
+      "areas": [
+        "HAND"
+      ],
+      "k": "bennett thumb",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S62.3",
+      "label": "Fracture of other metacarpal bone",
+      "areas": [
+        "HAND"
+      ],
+      "k": "boxer",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S62.5",
+      "label": "Fracture of thumb",
+      "areas": [
+        "HAND"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S62.6",
+      "label": "Fracture of other finger",
+      "areas": [
+        "HAND"
+      ],
+      "k": "phalanx",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S63.1",
+      "label": "Dislocation of finger",
+      "areas": [
+        "HAND"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S63.6",
+      "label": "Sprain and strain of finger(s)",
+      "areas": [
+        "HAND"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "R07.4",
+      "label": "Chest pain, unspecified",
+      "areas": [
+        "CHEST"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "R07.3",
+      "label": "Other chest pain",
+      "areas": [
+        "CHEST"
+      ],
+      "k": "chest wall pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M94.0",
+      "label": "Chondrocostal junction syndrome [Tietze]",
+      "areas": [
+        "CHEST"
+      ],
+      "k": "costochondritis",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S20.2",
+      "label": "Contusion of thorax",
+      "areas": [
+        "CHEST"
+      ],
+      "k": "bruised ribs",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S22.2",
+      "label": "Fracture of sternum",
+      "areas": [
+        "CHEST"
+      ],
+      "k": "breastbone",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S22.3",
+      "label": "Fracture of rib",
+      "areas": [
+        "CHEST"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S22.4",
+      "label": "Multiple fractures of ribs",
+      "areas": [
+        "CHEST"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S22.5",
+      "label": "Flail chest",
+      "areas": [
+        "CHEST"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M54.6",
+      "label": "Pain in thoracic spine",
+      "areas": [
+        "UPPER_BACK"
+      ],
+      "k": "upper back pain mid back pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M40.2",
+      "label": "Other and unspecified kyphosis",
+      "areas": [
+        "UPPER_BACK"
+      ],
+      "k": "hunchback",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M41.9",
+      "label": "Scoliosis, unspecified",
+      "areas": [
+        "UPPER_BACK",
+        "LOWER_BACK"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M42.0",
+      "label": "Juvenile osteochondrosis of spine",
+      "areas": [
+        "UPPER_BACK"
+      ],
+      "k": "scheuermann",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M45",
+      "label": "Ankylosing spondylitis",
+      "areas": [
+        "UPPER_BACK",
+        "LOWER_BACK",
+        "SACRUM"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M51.2",
+      "label": "Other specified intervertebral disc displacement",
+      "areas": [
+        "UPPER_BACK",
+        "LOWER_BACK"
+      ],
+      "k": "slipped disc herniation lumbago",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S22.0",
+      "label": "Fracture of thoracic vertebra",
+      "areas": [
+        "UPPER_BACK"
+      ],
+      "k": "compression fracture",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S23.3",
+      "label": "Sprain and strain of thoracic spine",
+      "areas": [
+        "UPPER_BACK"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M80.9",
+      "label": "Unspecified osteoporosis with pathological fracture",
+      "areas": [
+        "UPPER_BACK",
+        "LOWER_BACK",
+        "HIP",
+        "WRIST"
+      ],
+      "k": "fragility fracture",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M81.9",
+      "label": "Osteoporosis, unspecified",
+      "areas": [
+        "UPPER_BACK",
+        "LOWER_BACK",
+        "HIP"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M54.5",
+      "label": "Low back pain",
+      "areas": [
+        "LOWER_BACK"
+      ],
+      "k": "backache lumbago back pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M54.4",
+      "label": "Lumbago with sciatica",
+      "areas": [
+        "LOWER_BACK"
+      ],
+      "k": "back pain leg pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M54.3",
+      "label": "Sciatica",
+      "areas": [
+        "LOWER_BACK",
+        "THIGH"
+      ],
+      "k": "leg pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M54.1",
+      "label": "Radiculopathy",
+      "areas": [
+        "LOWER_BACK",
+        "NECK"
+      ],
+      "k": "pinched nerve",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M51.1",
+      "label": "Lumbar and other intervertebral disc disorders with radiculopathy",
+      "areas": [
+        "LOWER_BACK"
+      ],
+      "k": "slipped disc sciatica herniation",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M51.3",
+      "label": "Other specified intervertebral disc degeneration",
+      "areas": [
+        "LOWER_BACK",
+        "UPPER_BACK"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M48.0",
+      "label": "Spinal stenosis",
+      "areas": [
+        "LOWER_BACK",
+        "NECK"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M43.1",
+      "label": "Spondylolisthesis",
+      "areas": [
+        "LOWER_BACK"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M43.0",
+      "label": "Spondylolysis",
+      "areas": [
+        "LOWER_BACK"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M54.9",
+      "label": "Dorsalgia, unspecified",
+      "areas": [
+        "LOWER_BACK",
+        "UPPER_BACK"
+      ],
+      "k": "back pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S32.0",
+      "label": "Fracture of lumbar vertebra",
+      "areas": [
+        "LOWER_BACK"
+      ],
+      "k": "compression fracture",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S33.5",
+      "label": "Sprain and strain of lumbar spine",
+      "areas": [
+        "LOWER_BACK"
+      ],
+      "k": "back strain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S32.3",
+      "label": "Fracture of ilium",
+      "areas": [
+        "PELVIS"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S32.4",
+      "label": "Fracture of acetabulum",
+      "areas": [
+        "PELVIS",
+        "HIP"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S32.5",
+      "label": "Fracture of pubis",
+      "areas": [
+        "PELVIS"
+      ],
+      "k": "pubic ramus",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S32.8",
+      "label": "Fracture of other and unspecified parts of lumbar spine and pelvis",
+      "areas": [
+        "PELVIS"
+      ],
+      "k": "ischium",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M46.1",
+      "label": "Sacroiliitis, not elsewhere classified",
+      "areas": [
+        "PELVIS",
+        "SACRUM"
+      ],
+      "k": "si joint",
+      "system": "ICD-10"
+    },
+    {
+      "code": "R10.2",
+      "label": "Pelvic and perineal pain",
+      "areas": [
+        "PELVIS"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M53.3",
+      "label": "Sacrococcygeal disorders, not elsewhere classified",
+      "areas": [
+        "SACRUM"
+      ],
+      "k": "coccydynia tailbone pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S32.1",
+      "label": "Fracture of sacrum",
+      "areas": [
+        "SACRUM"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S32.2",
+      "label": "Fracture of coccyx",
+      "areas": [
+        "SACRUM"
+      ],
+      "k": "tailbone",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S33.6",
+      "label": "Sprain and strain of sacroiliac joint",
+      "areas": [
+        "SACRUM",
+        "PELVIS"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M16.9",
+      "label": "Coxarthrosis, unspecified",
+      "areas": [
+        "HIP"
+      ],
+      "k": "hip osteoarthritis arthritis",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M16.1",
+      "label": "Other primary coxarthrosis",
+      "areas": [
+        "HIP"
+      ],
+      "k": "hip osteoarthritis",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M70.6",
+      "label": "Trochanteric bursitis",
+      "areas": [
+        "HIP"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M87.0",
+      "label": "Idiopathic aseptic necrosis of bone",
+      "areas": [
+        "HIP"
+      ],
+      "k": "avascular necrosis femoral head",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M25.5",
+      "label": "Pain in joint",
+      "areas": [
+        "HIP",
+        "KNEE",
+        "SHOULDER",
+        "ELBOW",
+        "WRIST",
+        "ANKLE"
+      ],
+      "k": "arthralgia",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S72.0",
+      "label": "Fracture of neck of femur",
+      "areas": [
+        "HIP"
+      ],
+      "k": "hip fracture",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S72.1",
+      "label": "Pertrochanteric fracture",
+      "areas": [
+        "HIP"
+      ],
+      "k": "hip fracture intertrochanteric",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S72.2",
+      "label": "Subtrochanteric fracture",
+      "areas": [
+        "HIP"
+      ],
+      "k": "hip fracture",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S73.0",
+      "label": "Dislocation of hip",
+      "areas": [
+        "HIP"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "Q65.8",
+      "label": "Other congenital deformities of hip",
+      "areas": [
+        "HIP"
+      ],
+      "k": "dysplasia",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M91.1",
+      "label": "Juvenile osteochondrosis of head of femur [Legg-Calve-Perthes]",
+      "areas": [
+        "HIP"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M93.0",
+      "label": "Slipped upper femoral epiphysis (nontraumatic)",
+      "areas": [
+        "HIP"
+      ],
+      "k": "scfe",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S72.3",
+      "label": "Fracture of shaft of femur",
+      "areas": [
+        "THIGH"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S76.1",
+      "label": "Injury of quadriceps muscle and tendon",
+      "areas": [
+        "THIGH"
+      ],
+      "k": "strain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S76.3",
+      "label": "Injury of muscle and tendon of the posterior muscle group at thigh level",
+      "areas": [
+        "THIGH"
+      ],
+      "k": "hamstring strain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G57.1",
+      "label": "Meralgia paraesthetica",
+      "areas": [
+        "THIGH"
+      ],
+      "k": "numb thigh",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M17.9",
+      "label": "Gonarthrosis, unspecified",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "knee osteoarthritis arthritis",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M17.1",
+      "label": "Other primary gonarthrosis",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "knee osteoarthritis",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M22.2",
+      "label": "Patellofemoral disorders",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "runner's knee anterior knee pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M22.4",
+      "label": "Chondromalacia patellae",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M23.2",
+      "label": "Derangement of meniscus due to old tear or injury",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M70.4",
+      "label": "Prepatellar bursitis",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "housemaid's knee",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M76.5",
+      "label": "Patellar tendinitis",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "jumper's knee",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M71.2",
+      "label": "Synovial cyst of popliteal space [Baker]",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M92.5",
+      "label": "Juvenile osteochondrosis of tibia and fibula",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "osgood-schlatter",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M25.4",
+      "label": "Effusion of joint",
+      "areas": [
+        "KNEE",
+        "ANKLE",
+        "ELBOW"
+      ],
+      "k": "swelling",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S72.4",
+      "label": "Fracture of lower end of femur",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "supracondylar",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S82.0",
+      "label": "Fracture of patella",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "kneecap",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S82.1",
+      "label": "Fracture of upper end of tibia",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "tibial plateau",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S83.0",
+      "label": "Dislocation of patella",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S83.2",
+      "label": "Tear of meniscus, current",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S83.4",
+      "label": "Sprain and strain involving (fibular)(tibial) collateral ligament of knee",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "mcl lcl",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S83.5",
+      "label": "Sprain and strain involving (anterior)(posterior) cruciate ligament of knee",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "acl pcl",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S82.2",
+      "label": "Fracture of shaft of tibia",
+      "areas": [
+        "LOWER_LEG"
+      ],
+      "k": "shin",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S82.4",
+      "label": "Fracture of fibula alone",
+      "areas": [
+        "LOWER_LEG"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M76.8",
+      "label": "Other enthesopathies of lower limb, excluding foot",
+      "areas": [
+        "LOWER_LEG"
+      ],
+      "k": "shin splints",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M84.3",
+      "label": "Stress fracture, not elsewhere classified",
+      "areas": [
+        "LOWER_LEG",
+        "FOOT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S86.1",
+      "label": "Injury of other muscle(s) and tendon(s) of posterior muscle group at lower leg level",
+      "areas": [
+        "LOWER_LEG"
+      ],
+      "k": "calf strain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M86.9",
+      "label": "Osteomyelitis, unspecified",
+      "areas": [
+        "LOWER_LEG",
+        "THIGH",
+        "FOOT"
+      ],
+      "k": "bone infection",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S93.4",
+      "label": "Sprain and strain of ankle",
+      "areas": [
+        "ANKLE"
+      ],
+      "k": "twisted ankle",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S82.3",
+      "label": "Fracture of lower end of tibia",
+      "areas": [
+        "ANKLE"
+      ],
+      "k": "pilon",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S82.5",
+      "label": "Fracture of medial malleolus",
+      "areas": [
+        "ANKLE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S82.6",
+      "label": "Fracture of lateral malleolus",
+      "areas": [
+        "ANKLE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S92.1",
+      "label": "Fracture of talus",
+      "areas": [
+        "ANKLE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S93.0",
+      "label": "Dislocation of ankle joint",
+      "areas": [
+        "ANKLE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M76.6",
+      "label": "Achilles tendinitis",
+      "areas": [
+        "ANKLE",
+        "FOOT"
+      ],
+      "k": "heel pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S86.0",
+      "label": "Injury of Achilles tendon",
+      "areas": [
+        "ANKLE"
+      ],
+      "k": "rupture",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M72.2",
+      "label": "Plantar fascial fibromatosis",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "plantar fasciitis heel pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M77.3",
+      "label": "Calcaneal spur",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "heel spur heel pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M77.4",
+      "label": "Metatarsalgia",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "forefoot pain",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M20.1",
+      "label": "Hallux valgus (acquired)",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "bunion",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M20.2",
+      "label": "Hallux rigidus",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "stiff big toe",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M20.4",
+      "label": "Other hammer toe(s) (acquired)",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M21.4",
+      "label": "Flat foot [pes planus] (acquired)",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "M10.9",
+      "label": "Gout, unspecified",
+      "areas": [
+        "FOOT",
+        "ANKLE",
+        "KNEE"
+      ],
+      "k": "big toe",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G57.6",
+      "label": "Lesion of plantar nerve",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "morton's neuroma metatarsalgia",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S92.0",
+      "label": "Fracture of calcaneus",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "heel bone",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S92.2",
+      "label": "Fracture of other tarsal bone(s)",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "navicular cuboid cuneiform",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S92.3",
+      "label": "Fracture of metatarsal bone",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S92.4",
+      "label": "Fracture of great toe",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S92.5",
+      "label": "Fracture of other toe",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "S93.6",
+      "label": "Sprain and strain of other and unspecified parts of foot",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I20.9",
+      "label": "Angina pectoris, unspecified",
+      "areas": [
+        "HEART"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I21.9",
+      "label": "Acute myocardial infarction, unspecified",
+      "areas": [
+        "HEART"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I25.1",
+      "label": "Atherosclerotic heart disease",
+      "areas": [
+        "HEART"
+      ],
+      "k": "CAD coronary artery disease",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I30.9",
+      "label": "Acute pericarditis, unspecified",
+      "areas": [
+        "HEART"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I33.0",
+      "label": "Acute and subacute infective endocarditis",
+      "areas": [
+        "HEART"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I34.0",
+      "label": "Mitral (valve) insufficiency",
+      "areas": [
+        "HEART"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I35.0",
+      "label": "Aortic (valve) stenosis",
+      "areas": [
+        "HEART"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I42.9",
+      "label": "Cardiomyopathy, unspecified",
+      "areas": [
+        "HEART"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I47.1",
+      "label": "Supraventricular tachycardia",
+      "areas": [
+        "HEART"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I48.9",
+      "label": "Atrial fibrillation and atrial flutter, unspecified",
+      "areas": [
+        "HEART"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I49.9",
+      "label": "Cardiac arrhythmia, unspecified",
+      "areas": [
+        "HEART"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I50.9",
+      "label": "Heart failure, unspecified",
+      "areas": [
+        "HEART"
+      ],
+      "k": "heart failure cardiac failure",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I70.0",
+      "label": "Atherosclerosis of aorta",
+      "areas": [
+        "AORTA"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I71.0",
+      "label": "Dissection of aorta [any part]",
+      "areas": [
+        "AORTA"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I71.2",
+      "label": "Thoracic aortic aneurysm, without mention of rupture",
+      "areas": [
+        "AORTA"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I71.4",
+      "label": "Abdominal aortic aneurysm, without mention of rupture",
+      "areas": [
+        "AORTA"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I82.2",
+      "label": "Embolism and thrombosis of vena cava",
+      "areas": [
+        "VENA_CAVA"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I87.1",
+      "label": "Compression of vein",
+      "areas": [
+        "VENA_CAVA"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G40.9",
+      "label": "Epilepsy, unspecified",
+      "areas": [
+        "BRAIN"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I63.9",
+      "label": "Cerebral infarction, unspecified",
+      "areas": [
+        "BRAIN"
+      ],
+      "k": "ischaemic ischemic stroke",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I61.9",
+      "label": "Intracerebral haemorrhage, unspecified",
+      "areas": [
+        "BRAIN"
+      ],
+      "k": "hemorrhagic haemorrhagic stroke",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G20",
+      "label": "Parkinson disease",
+      "areas": [
+        "BRAIN"
+      ],
+      "k": "parkinson parkinsons",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G91.9",
+      "label": "Hydrocephalus, unspecified",
+      "areas": [
+        "BRAIN"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "G93.9",
+      "label": "Disorder of brain, unspecified",
+      "areas": [
+        "BRAIN"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H60.9",
+      "label": "Otitis externa, unspecified",
+      "areas": [
+        "EAR"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H65.9",
+      "label": "Nonsuppurative otitis media, unspecified",
+      "areas": [
+        "EAR"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H66.9",
+      "label": "Otitis media, unspecified",
+      "areas": [
+        "EAR"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H61.2",
+      "label": "Impacted cerumen",
+      "areas": [
+        "EAR"
+      ],
+      "k": "earwax wax impaction",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H91.9",
+      "label": "Hearing loss, unspecified",
+      "areas": [
+        "EAR"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H93.1",
+      "label": "Tinnitus",
+      "areas": [
+        "EAR"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H92.0",
+      "label": "Otalgia",
+      "areas": [
+        "EAR"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H10.9",
+      "label": "Conjunctivitis, unspecified",
+      "areas": [
+        "EYE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H16.9",
+      "label": "Keratitis, unspecified",
+      "areas": [
+        "EYE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H20.9",
+      "label": "Iridocyclitis, unspecified",
+      "areas": [
+        "EYE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H26.9",
+      "label": "Cataract, unspecified",
+      "areas": [
+        "EYE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H40.9",
+      "label": "Glaucoma, unspecified",
+      "areas": [
+        "EYE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H04.1",
+      "label": "Other disorders of lacrimal gland",
+      "areas": [
+        "EYE"
+      ],
+      "k": "dry eye",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H52.1",
+      "label": "Myopia",
+      "areas": [
+        "EYE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "H53.9",
+      "label": "Visual disturbance, unspecified",
+      "areas": [
+        "EYE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J00",
+      "label": "Acute nasopharyngitis [common cold]",
+      "areas": [
+        "NOSE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J30.4",
+      "label": "Allergic rhinitis, unspecified",
+      "areas": [
+        "NOSE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J31.0",
+      "label": "Chronic rhinitis",
+      "areas": [
+        "NOSE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J34.2",
+      "label": "Deviated nasal septum",
+      "areas": [
+        "NOSE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J33.9",
+      "label": "Nasal polyp, unspecified",
+      "areas": [
+        "NOSE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J02.9",
+      "label": "Acute pharyngitis, unspecified",
+      "areas": [
+        "THROAT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J03.9",
+      "label": "Acute tonsillitis, unspecified",
+      "areas": [
+        "THROAT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J04.0",
+      "label": "Acute laryngitis",
+      "areas": [
+        "THROAT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J37.0",
+      "label": "Chronic laryngitis",
+      "areas": [
+        "THROAT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J35.1",
+      "label": "Hypertrophy of tonsils",
+      "areas": [
+        "THROAT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "R49.0",
+      "label": "Dysphonia",
+      "areas": [
+        "THROAT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "R13",
+      "label": "Dysphagia",
+      "areas": [
+        "THROAT"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "E03.9",
+      "label": "Hypothyroidism, unspecified",
+      "areas": [
+        "THYROID"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "E05.9",
+      "label": "Thyrotoxicosis, unspecified",
+      "areas": [
+        "THYROID"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "E04.1",
+      "label": "Nontoxic single thyroid nodule",
+      "areas": [
+        "THYROID"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "E04.2",
+      "label": "Nontoxic multinodular goitre",
+      "areas": [
+        "THYROID"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "E06.3",
+      "label": "Autoimmune thyroiditis",
+      "areas": [
+        "THYROID"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "E07.9",
+      "label": "Disorder of thyroid, unspecified",
+      "areas": [
+        "THYROID"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J04.1",
+      "label": "Acute tracheitis",
+      "areas": [
+        "AIRWAY"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J20.9",
+      "label": "Acute bronchitis, unspecified",
+      "areas": [
+        "AIRWAY"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J41.0",
+      "label": "Simple chronic bronchitis",
+      "areas": [
+        "AIRWAY"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J42",
+      "label": "Unspecified chronic bronchitis",
+      "areas": [
+        "AIRWAY"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J18.9",
+      "label": "Pneumonia, unspecified",
+      "areas": [
+        "LUNG"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J45.9",
+      "label": "Asthma, unspecified",
+      "areas": [
+        "LUNG"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J44.9",
+      "label": "Chronic obstructive pulmonary disease, unspecified",
+      "areas": [
+        "LUNG"
+      ],
+      "k": "COPD",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J47",
+      "label": "Bronchiectasis",
+      "areas": [
+        "LUNG"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J90",
+      "label": "Pleural effusion, not elsewhere classified",
+      "areas": [
+        "LUNG"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "I26.9",
+      "label": "Pulmonary embolism without mention of acute cor pulmonale",
+      "areas": [
+        "LUNG"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J84.9",
+      "label": "Interstitial pulmonary disease, unspecified",
+      "areas": [
+        "LUNG"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "J93.9",
+      "label": "Pneumothorax, unspecified",
+      "areas": [
+        "LUNG"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K20",
+      "label": "Oesophagitis",
+      "areas": [
+        "ESOPHAGUS"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K21.0",
+      "label": "Gastro-oesophageal reflux disease with oesophagitis",
+      "areas": [
+        "ESOPHAGUS"
+      ],
+      "k": "GERD GORD acid reflux",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K21.9",
+      "label": "Gastro-oesophageal reflux disease without oesophagitis",
+      "areas": [
+        "ESOPHAGUS"
+      ],
+      "k": "GERD GORD acid reflux",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K22.0",
+      "label": "Achalasia of cardia",
+      "areas": [
+        "ESOPHAGUS"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K22.2",
+      "label": "Oesophageal obstruction",
+      "areas": [
+        "ESOPHAGUS"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K22.9",
+      "label": "Disease of oesophagus, unspecified",
+      "areas": [
+        "ESOPHAGUS"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K25.9",
+      "label": "Gastric ulcer: Unspecified as acute or chronic, without haemorrhage or perforation",
+      "areas": [
+        "STOMACH"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K29.7",
+      "label": "Gastritis, unspecified",
+      "areas": [
+        "STOMACH"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K30",
+      "label": "Functional dyspepsia",
+      "areas": [
+        "STOMACH"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K31.9",
+      "label": "Disease of stomach and duodenum, unspecified",
+      "areas": [
+        "STOMACH"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K85.9",
+      "label": "Acute pancreatitis, unspecified",
+      "areas": [
+        "PANCREAS"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K86.0",
+      "label": "Alcohol-induced chronic pancreatitis",
+      "areas": [
+        "PANCREAS"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K86.1",
+      "label": "Other chronic pancreatitis",
+      "areas": [
+        "PANCREAS"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K86.2",
+      "label": "Cyst of pancreas",
+      "areas": [
+        "PANCREAS"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K86.9",
+      "label": "Disease of pancreas, unspecified",
+      "areas": [
+        "PANCREAS"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K76.0",
+      "label": "Fatty (change of) liver, not elsewhere classified",
+      "areas": [
+        "LIVER"
+      ],
+      "k": "fatty liver",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K70.0",
+      "label": "Alcoholic fatty liver",
+      "areas": [
+        "LIVER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K74.6",
+      "label": "Other and unspecified cirrhosis of liver",
+      "areas": [
+        "LIVER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K75.9",
+      "label": "Inflammatory liver disease, unspecified",
+      "areas": [
+        "LIVER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "B18.1",
+      "label": "Chronic viral hepatitis B without delta-agent",
+      "areas": [
+        "LIVER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "B18.2",
+      "label": "Chronic viral hepatitis C",
+      "areas": [
+        "LIVER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K80.2",
+      "label": "Calculus of gallbladder without cholecystitis",
+      "areas": [
+        "GALLBLADDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K81.0",
+      "label": "Acute cholecystitis",
+      "areas": [
+        "GALLBLADDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K81.1",
+      "label": "Chronic cholecystitis",
+      "areas": [
+        "GALLBLADDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K82.9",
+      "label": "Disease of gallbladder, unspecified",
+      "areas": [
+        "GALLBLADDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "D73.0",
+      "label": "Hyposplenism",
+      "areas": [
+        "SPLEEN"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "D73.1",
+      "label": "Hypersplenism",
+      "areas": [
+        "SPLEEN"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "D73.3",
+      "label": "Abscess of spleen",
+      "areas": [
+        "SPLEEN"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "D73.4",
+      "label": "Cyst of spleen",
+      "areas": [
+        "SPLEEN"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "D73.5",
+      "label": "Infarction of spleen",
+      "areas": [
+        "SPLEEN"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "R16.1",
+      "label": "Splenomegaly, not elsewhere classified",
+      "areas": [
+        "SPLEEN"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K50.0",
+      "label": "Crohn disease of small intestine",
+      "areas": [
+        "SMALL_INTESTINE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K52.9",
+      "label": "Noninfective gastroenteritis and colitis, unspecified",
+      "areas": [
+        "SMALL_INTESTINE",
+        "COLON"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K56.6",
+      "label": "Other and unspecified intestinal obstruction",
+      "areas": [
+        "SMALL_INTESTINE",
+        "COLON"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K90.0",
+      "label": "Coeliac disease",
+      "areas": [
+        "SMALL_INTESTINE"
+      ],
+      "k": "celiac coeliac",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K90.9",
+      "label": "Intestinal malabsorption, unspecified",
+      "areas": [
+        "SMALL_INTESTINE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K35.8",
+      "label": "Acute appendicitis, other and unspecified",
+      "areas": [
+        "COLON"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K51.9",
+      "label": "Ulcerative colitis, unspecified",
+      "areas": [
+        "COLON"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K57.3",
+      "label": "Diverticular disease of large intestine without perforation or abscess",
+      "areas": [
+        "COLON"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K58.8",
+      "label": "Other and unspecified irritable bowel syndrome",
+      "areas": [
+        "COLON"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "K59.0",
+      "label": "Constipation",
+      "areas": [
+        "COLON"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N10",
+      "label": "Acute tubulo-interstitial nephritis",
+      "areas": [
+        "KIDNEY"
+      ],
+      "k": "pyelonephritis kidney infection",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N11.9",
+      "label": "Chronic tubulo-interstitial nephritis, unspecified",
+      "areas": [
+        "KIDNEY"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N17.9",
+      "label": "Acute renal failure, unspecified",
+      "areas": [
+        "KIDNEY"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N18.9",
+      "label": "Chronic kidney disease, unspecified",
+      "areas": [
+        "KIDNEY"
+      ],
+      "k": "CKD chronic kidney disease",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N20.0",
+      "label": "Calculus of kidney",
+      "areas": [
+        "KIDNEY"
+      ],
+      "k": "kidney stone nephrolithiasis",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N28.1",
+      "label": "Cyst of kidney",
+      "areas": [
+        "KIDNEY"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N13.3",
+      "label": "Other and unspecified hydronephrosis",
+      "areas": [
+        "KIDNEY"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "E27.1",
+      "label": "Primary adrenocortical insufficiency",
+      "areas": [
+        "ADRENAL"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "E27.4",
+      "label": "Other and unspecified adrenocortical insufficiency",
+      "areas": [
+        "ADRENAL"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "E27.9",
+      "label": "Disorder of adrenal gland, unspecified",
+      "areas": [
+        "ADRENAL"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "E26.9",
+      "label": "Hyperaldosteronism, unspecified",
+      "areas": [
+        "ADRENAL"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N20.1",
+      "label": "Calculus of ureter",
+      "areas": [
+        "URETER"
+      ],
+      "k": "ureteric stone ureter stone",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N13.1",
+      "label": "Hydronephrosis with ureteral stricture, not elsewhere classified",
+      "areas": [
+        "URETER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N13.2",
+      "label": "Hydronephrosis with renal and ureteral calculous obstruction",
+      "areas": [
+        "URETER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N13.5",
+      "label": "Kinking and stricture of ureter without hydronephrosis",
+      "areas": [
+        "URETER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N30.0",
+      "label": "Acute cystitis",
+      "areas": [
+        "BLADDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N30.1",
+      "label": "Interstitial cystitis (chronic)",
+      "areas": [
+        "BLADDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N30.9",
+      "label": "Cystitis, unspecified",
+      "areas": [
+        "BLADDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N31.9",
+      "label": "Neuromuscular dysfunction of bladder, unspecified",
+      "areas": [
+        "BLADDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N32.0",
+      "label": "Bladder-neck obstruction",
+      "areas": [
+        "BLADDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N32.9",
+      "label": "Bladder disorder, unspecified",
+      "areas": [
+        "BLADDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N21.0",
+      "label": "Calculus in bladder",
+      "areas": [
+        "BLADDER"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N34.1",
+      "label": "Nonspecific urethritis",
+      "areas": [
+        "URETHRA"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N35.9",
+      "label": "Urethral stricture, unspecified",
+      "areas": [
+        "URETHRA"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N36.9",
+      "label": "Urethral disorder, unspecified",
+      "areas": [
+        "URETHRA"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N40",
+      "label": "Hyperplasia of prostate",
+      "areas": [
+        "PROSTATE"
+      ],
+      "k": "BPH benign prostatic enlargement",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N41.0",
+      "label": "Acute prostatitis",
+      "areas": [
+        "PROSTATE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N41.1",
+      "label": "Chronic prostatitis",
+      "areas": [
+        "PROSTATE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N41.9",
+      "label": "Inflammatory disease of prostate, unspecified",
+      "areas": [
+        "PROSTATE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    },
+    {
+      "code": "N42.9",
+      "label": "Disorder of prostate, unspecified",
+      "areas": [
+        "PROSTATE"
+      ],
+      "k": "",
+      "system": "ICD-10"
+    }
+  ],
+  "complaints": [
+    {
+      "id": "HEADACHE",
+      "name": "Headache",
+      "areas": [
+        "HEAD"
+      ],
+      "k": "head pain migraine"
+    },
+    {
+      "id": "FACE_PAIN",
+      "name": "Face pain",
+      "areas": [
+        "FACE"
+      ],
+      "k": "cheek nose sinus eye socket"
+    },
+    {
+      "id": "JAW_PAIN",
+      "name": "Jaw pain",
+      "areas": [
+        "JAW"
+      ],
+      "k": "tmj chewing clicking jaw"
+    },
+    {
+      "id": "NECK_PAIN",
+      "name": "Neck pain",
+      "areas": [
+        "NECK"
+      ],
+      "k": "stiff neck whiplash"
+    },
+    {
+      "id": "SHOULDER_PAIN",
+      "name": "Shoulder pain",
+      "areas": [
+        "SHOULDER"
+      ],
+      "k": "frozen shoulder collarbone"
+    },
+    {
+      "id": "ARM_PAIN",
+      "name": "Arm pain",
+      "areas": [
+        "UPPER_ARM",
+        "FOREARM"
+      ],
+      "k": "upper arm forearm"
+    },
+    {
+      "id": "ELBOW_PAIN",
+      "name": "Elbow pain",
+      "areas": [
+        "ELBOW"
+      ],
+      "k": "tennis elbow golfer"
+    },
+    {
+      "id": "WRIST_PAIN",
+      "name": "Wrist pain",
+      "areas": [
+        "WRIST"
+      ],
+      "k": "carpal tunnel"
+    },
+    {
+      "id": "HAND_PAIN",
+      "name": "Hand or finger pain",
+      "areas": [
+        "HAND"
+      ],
+      "k": "thumb finger knuckle"
+    },
+    {
+      "id": "CHEST_PAIN",
+      "name": "Chest or rib pain",
+      "areas": [
+        "CHEST"
+      ],
+      "k": "ribs breastbone sternum"
+    },
+    {
+      "id": "UPPER_BACK_PAIN",
+      "name": "Upper back pain",
+      "areas": [
+        "UPPER_BACK"
+      ],
+      "k": "mid back between shoulder blades thoracic"
+    },
+    {
+      "id": "BACK_PAIN",
+      "name": "Back pain",
+      "areas": [
+        "LOWER_BACK"
+      ],
+      "k": "low back lower back backache lumbago"
+    },
+    {
+      "id": "SCIATICA",
+      "name": "Sciatica",
+      "areas": [
+        "LOWER_BACK"
+      ],
+      "k": "leg pain from back shooting pain"
+    },
+    {
+      "id": "TAILBONE_PAIN",
+      "name": "Tailbone pain",
+      "areas": [
+        "SACRUM"
+      ],
+      "k": "coccyx sitting pain buttock"
+    },
+    {
+      "id": "HIP_PAIN",
+      "name": "Hip pain",
+      "areas": [
+        "HIP"
+      ],
+      "k": "groin"
+    },
+    {
+      "id": "PELVIC_PAIN",
+      "name": "Pelvic pain",
+      "areas": [
+        "PELVIS"
+      ],
+      "k": "pelvis pubic"
+    },
+    {
+      "id": "THIGH_PAIN",
+      "name": "Thigh pain",
+      "areas": [
+        "THIGH"
+      ],
+      "k": "upper leg"
+    },
+    {
+      "id": "KNEE_PAIN",
+      "name": "Knee pain",
+      "areas": [
+        "KNEE"
+      ],
+      "k": "kneecap"
+    },
+    {
+      "id": "LEG_PAIN",
+      "name": "Shin or calf pain",
+      "areas": [
+        "LOWER_LEG"
+      ],
+      "k": "lower leg shin calf"
+    },
+    {
+      "id": "ANKLE_PAIN",
+      "name": "Ankle pain",
+      "areas": [
+        "ANKLE"
+      ],
+      "k": "twisted ankle sprain"
+    },
+    {
+      "id": "FOOT_PAIN",
+      "name": "Foot or heel pain",
+      "areas": [
+        "FOOT"
+      ],
+      "k": "heel toe sole bunion"
+    },
+    {
+      "id": "EAR_PAIN",
+      "name": "Ear pain",
+      "areas": [
+        "EAR"
+      ],
+      "k": "earache hearing otalgia"
+    },
+    {
+      "id": "EYE_DISCOMFORT",
+      "name": "Eye discomfort",
+      "areas": [
+        "EYE"
+      ],
+      "k": "eye pain vision ophthalmology"
+    },
+    {
+      "id": "COUGH",
+      "name": "Cough",
+      "areas": [
+        "AIRWAY",
+        "LUNG"
+      ],
+      "k": "coughing dry persistent cough"
+    },
+    {
+      "id": "BREATHLESSNESS",
+      "name": "Shortness of breath",
+      "areas": [
+        "CHEST",
+        "LUNG",
+        "HEART"
+      ],
+      "specialties": [
+        "PULMONOLOGY",
+        "CARDIOLOGY",
+        "INTERNAL_MEDICINE"
+      ],
+      "k": "breathless dyspnea dyspnoea difficulty breathing exertional"
+    },
+    {
+      "id": "WHEEZE",
+      "name": "Wheezing",
+      "areas": [
+        "AIRWAY",
+        "LUNG"
+      ],
+      "k": "wheeze whistling breathing"
+    },
+    {
+      "id": "SPUTUM",
+      "name": "Sputum / phlegm",
+      "areas": [
+        "AIRWAY",
+        "LUNG"
+      ],
+      "specialties": [
+        "PULMONOLOGY",
+        "INTERNAL_MEDICINE"
+      ],
+      "k": "productive cough mucus sputum phlegm"
+    },
+    {
+      "id": "HEMOPTYSIS",
+      "name": "Coughing up blood",
+      "areas": [
+        "AIRWAY",
+        "LUNG"
+      ],
+      "specialties": [
+        "PULMONOLOGY",
+        "INTERNAL_MEDICINE"
+      ],
+      "k": "hemoptysis haemoptysis blood stained sputum"
+    },
+    {
+      "id": "CHEST_TIGHTNESS",
+      "name": "Chest tightness",
+      "areas": [
+        "CHEST",
+        "AIRWAY",
+        "LUNG",
+        "HEART"
+      ],
+      "specialties": [
+        "PULMONOLOGY",
+        "CARDIOLOGY",
+        "INTERNAL_MEDICINE"
+      ],
+      "k": "tight chest pressure heaviness"
+    },
+    {
+      "id": "PAIN_BREATHING",
+      "name": "Pain on breathing",
+      "areas": [
+        "CHEST",
+        "LUNG"
+      ],
+      "specialties": [
+        "PULMONOLOGY",
+        "INTERNAL_MEDICINE"
+      ],
+      "k": "pleuritic pain deep inspiration breathing"
+    },
+    {
+      "id": "PALPITATIONS",
+      "name": "Palpitations",
+      "areas": [
+        "CHEST",
+        "HEART"
+      ],
+      "specialties": [
+        "CARDIOLOGY",
+        "INTERNAL_MEDICINE"
+      ],
+      "k": "racing pounding fluttering irregular heartbeat skipped beat"
+    },
+    {
+      "id": "ORTHOPNEA",
+      "name": "Breathlessness lying flat",
+      "areas": [
+        "CHEST",
+        "HEART",
+        "LUNG"
+      ],
+      "specialties": [
+        "CARDIOLOGY",
+        "PULMONOLOGY",
+        "INTERNAL_MEDICINE"
+      ],
+      "k": "orthopnea orthopnoea breathless lying down"
+    },
+    {
+      "id": "ABDOMINAL_PAIN",
+      "name": "Abdominal pain",
+      "areas": [
+        "STOMACH",
+        "SMALL_INTESTINE",
+        "COLON",
+        "LIVER",
+        "GALLBLADDER",
+        "PANCREAS"
+      ],
+      "specialties": [
+        "GASTROENTEROLOGY",
+        "INTERNAL_MEDICINE"
+      ],
+      "k": "stomach ache belly pain abdominal cramps"
+    },
+    {
+      "id": "HEARTBURN",
+      "name": "Heartburn / acid reflux",
+      "areas": [
+        "ESOPHAGUS",
+        "STOMACH"
+      ],
+      "k": "acid reflux indigestion burning regurgitation"
+    },
+    {
+      "id": "DYSPHAGIA",
+      "name": "Difficulty swallowing",
+      "areas": [
+        "THROAT",
+        "ESOPHAGUS"
+      ],
+      "k": "dysphagia food sticking swallowing"
+    },
+    {
+      "id": "NAUSEA",
+      "name": "Nausea",
+      "areas": [
+        "STOMACH",
+        "SMALL_INTESTINE"
+      ],
+      "k": "feeling sick queasy nausea"
+    },
+    {
+      "id": "VOMITING",
+      "name": "Vomiting",
+      "areas": [
+        "STOMACH",
+        "SMALL_INTESTINE"
+      ],
+      "k": "vomit throwing up emesis"
+    },
+    {
+      "id": "BLOATING",
+      "name": "Abdominal bloating",
+      "areas": [
+        "STOMACH",
+        "SMALL_INTESTINE",
+        "COLON"
+      ],
+      "k": "bloating gas distension flatulence"
+    },
+    {
+      "id": "DIARRHEA",
+      "name": "Diarrhea",
+      "areas": [
+        "SMALL_INTESTINE",
+        "COLON"
+      ],
+      "k": "diarrhoea loose stools frequent stools"
+    },
+    {
+      "id": "CONSTIPATION",
+      "name": "Constipation",
+      "areas": [
+        "COLON"
+      ],
+      "k": "hard stools straining infrequent stools"
+    },
+    {
+      "id": "BLOOD_STOOL",
+      "name": "Blood in stool",
+      "areas": [
+        "SMALL_INTESTINE",
+        "COLON"
+      ],
+      "k": "rectal bleeding bloody stool hematochezia haematochezia"
+    },
+    {
+      "id": "BLACK_STOOL",
+      "name": "Black / tarry stool",
+      "areas": [
+        "STOMACH",
+        "SMALL_INTESTINE",
+        "COLON"
+      ],
+      "k": "melena melaena black tarry stools"
+    },
+    {
+      "id": "JAUNDICE",
+      "name": "Yellow skin / eyes",
+      "areas": [
+        "LIVER",
+        "GALLBLADDER",
+        "PANCREAS"
+      ],
+      "specialties": [
+        "GASTROENTEROLOGY",
+        "INTERNAL_MEDICINE"
+      ],
+      "k": "jaundice yellow eyes skin"
+    },
+    {
+      "id": "DYSURIA",
+      "name": "Pain / burning urination",
+      "areas": [
+        "BLADDER",
+        "URETHRA"
+      ],
+      "k": "dysuria painful burning urination pee"
+    },
+    {
+      "id": "URINARY_FREQUENCY",
+      "name": "Frequent urination",
+      "areas": [
+        "BLADDER",
+        "URETHRA"
+      ],
+      "k": "urinary frequency frequent pee passing urine"
+    },
+    {
+      "id": "URINARY_URGENCY",
+      "name": "Urgent urination",
+      "areas": [
+        "BLADDER",
+        "URETHRA"
+      ],
+      "k": "urinary urgency sudden urge"
+    },
+    {
+      "id": "NOCTURIA",
+      "name": "Night-time urination",
+      "areas": [
+        "BLADDER"
+      ],
+      "k": "nocturia night waking urination"
+    },
+    {
+      "id": "URINARY_HESITANCY",
+      "name": "Difficulty starting urination",
+      "areas": [
+        "BLADDER",
+        "URETHRA"
+      ],
+      "k": "urinary hesitancy start urine trouble voiding"
+    },
+    {
+      "id": "WEAK_STREAM",
+      "name": "Weak urinary stream",
+      "areas": [
+        "BLADDER",
+        "URETHRA"
+      ],
+      "k": "slow weak intermittent stream dribbling"
+    },
+    {
+      "id": "INCOMPLETE_EMPTYING",
+      "name": "Incomplete bladder emptying",
+      "areas": [
+        "BLADDER"
+      ],
+      "k": "incomplete emptying retention residual urine"
+    },
+    {
+      "id": "URINARY_LEAKAGE",
+      "name": "Urine leakage",
+      "areas": [
+        "BLADDER",
+        "URETHRA"
+      ],
+      "k": "urinary incontinence leaking urine bladder control"
+    },
+    {
+      "id": "HEMATURIA",
+      "name": "Blood in urine",
+      "areas": [
+        "KIDNEY",
+        "URETER",
+        "BLADDER",
+        "URETHRA"
+      ],
+      "k": "hematuria haematuria red pink brown urine"
+    },
+    {
+      "id": "FLANK_PAIN",
+      "name": "Flank / loin pain",
+      "areas": [
+        "KIDNEY",
+        "URETER"
+      ],
+      "k": "flank loin side renal pain"
+    },
+    {
+      "id": "NASAL_BLOCKAGE",
+      "name": "Blocked nose",
+      "areas": [
+        "NOSE"
+      ],
+      "k": "nasal congestion obstruction stuffy nose"
+    },
+    {
+      "id": "RUNNY_NOSE",
+      "name": "Runny nose",
+      "areas": [
+        "NOSE"
+      ],
+      "k": "rhinorrhea rhinorrhoea nasal discharge sneezing"
+    },
+    {
+      "id": "NOSEBLEED",
+      "name": "Nosebleed",
+      "areas": [
+        "NOSE"
+      ],
+      "k": "epistaxis bleeding nose"
+    },
+    {
+      "id": "SORE_THROAT",
+      "name": "Sore throat",
+      "areas": [
+        "THROAT"
+      ],
+      "k": "throat pain painful swallowing"
+    },
+    {
+      "id": "HOARSENESS",
+      "name": "Hoarse voice",
+      "areas": [
+        "THROAT",
+        "AIRWAY"
+      ],
+      "k": "hoarseness dysphonia voice change"
+    },
+    {
+      "id": "HEARING_CHANGE",
+      "name": "Reduced hearing",
+      "areas": [
+        "EAR"
+      ],
+      "k": "hearing loss deaf muffled hearing"
+    },
+    {
+      "id": "TINNITUS",
+      "name": "Ringing in ears",
+      "areas": [
+        "EAR"
+      ],
+      "k": "tinnitus ringing buzzing ears"
+    },
+    {
+      "id": "EAR_DISCHARGE",
+      "name": "Ear discharge",
+      "areas": [
+        "EAR"
+      ],
+      "k": "ear drainage otorrhea otorrhoea"
+    },
+    {
+      "id": "SINUS_PRESSURE",
+      "name": "Sinus pressure",
+      "areas": [
+        "FACE",
+        "NOSE"
+      ],
+      "k": "sinus facial pressure congestion"
+    },
+    {
+      "id": "BLURRED_VISION",
+      "name": "Blurred vision",
+      "areas": [
+        "EYE"
+      ],
+      "k": "blurry blurred vision visual disturbance"
+    },
+    {
+      "id": "RED_EYE",
+      "name": "Red eye",
+      "areas": [
+        "EYE"
+      ],
+      "k": "redness bloodshot eye"
+    },
+    {
+      "id": "DRY_EYE",
+      "name": "Dry / gritty eyes",
+      "areas": [
+        "EYE"
+      ],
+      "k": "dry gritty sandy burning eyes"
+    },
+    {
+      "id": "WATERY_EYE",
+      "name": "Watery eyes",
+      "areas": [
+        "EYE"
+      ],
+      "k": "tearing watering epiphora"
+    },
+    {
+      "id": "ITCHY_EYE",
+      "name": "Itchy eyes",
+      "areas": [
+        "EYE"
+      ],
+      "k": "itching itchy eyes"
+    },
+    {
+      "id": "LIGHT_SENSITIVITY",
+      "name": "Light sensitivity",
+      "areas": [
+        "EYE"
+      ],
+      "k": "photophobia sensitive light"
+    },
+    {
+      "id": "FLOATERS",
+      "name": "Flashes / floaters",
+      "areas": [
+        "EYE"
+      ],
+      "k": "flashes floaters spots vision"
+    },
+    {
+      "id": "DIZZINESS",
+      "name": "Dizziness / vertigo",
+      "areas": [
+        "HEAD",
+        "BRAIN",
+        "EAR"
+      ],
+      "specialties": [
+        "NEUROLOGY",
+        "ENT"
+      ],
+      "k": "dizzy vertigo spinning lightheaded"
+    },
+    {
+      "id": "BALANCE_PROBLEM",
+      "name": "Balance problems",
+      "areas": [
+        "HEAD",
+        "BRAIN",
+        "EAR"
+      ],
+      "specialties": [
+        "NEUROLOGY",
+        "ENT"
+      ],
+      "k": "unsteady imbalance balance difficulty"
+    },
+    {
+      "id": "MEMORY_CONCERN",
+      "name": "Memory concerns",
+      "areas": [
+        "BRAIN",
+        "HEAD"
+      ],
+      "specialties": [
+        "NEUROLOGY"
+      ],
+      "k": "memory forgetfulness concentration cognition"
+    },
+    {
+      "id": "TINGLING",
+      "name": "Numbness / tingling",
+      "areas": [
+        "HAND",
+        "FOREARM",
+        "LOWER_LEG",
+        "FOOT"
+      ],
+      "specialties": [
+        "NEUROLOGY",
+        "ORTHOPEDICS"
+      ],
+      "k": "numb tingling pins needles paresthesia paraesthesia"
+    },
+    {
+      "id": "LIMB_WEAKNESS",
+      "name": "Limb weakness",
+      "areas": [
+        "UPPER_ARM",
+        "FOREARM",
+        "HAND",
+        "THIGH",
+        "LOWER_LEG",
+        "FOOT"
+      ],
+      "specialties": [
+        "NEUROLOGY",
+        "ORTHOPEDICS"
+      ],
+      "k": "weakness weak arm leg muscle"
+    },
+    {
+      "id": "TREMOR",
+      "name": "Tremor / shaking",
+      "areas": [
+        "HAND",
+        "FOREARM"
+      ],
+      "specialties": [
+        "NEUROLOGY"
+      ],
+      "k": "tremor shaking hand"
+    },
+    {
+      "id": "JOINT_STIFFNESS",
+      "name": "Joint stiffness",
+      "areas": [
+        "SHOULDER",
+        "ELBOW",
+        "WRIST",
+        "HAND",
+        "HIP",
+        "KNEE",
+        "ANKLE",
+        "FOOT"
+      ],
+      "specialties": [
+        "ORTHOPEDICS"
+      ],
+      "k": "stiff joint reduced movement morning stiffness"
+    },
+    {
+      "id": "JOINT_SWELLING",
+      "name": "Joint swelling",
+      "areas": [
+        "SHOULDER",
+        "ELBOW",
+        "WRIST",
+        "HAND",
+        "HIP",
+        "KNEE",
+        "ANKLE",
+        "FOOT"
+      ],
+      "specialties": [
+        "ORTHOPEDICS"
+      ],
+      "k": "swollen joint swelling effusion"
+    }
+  ]
+}

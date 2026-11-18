@@ -1,0 +1,882 @@
+customAttribute attribute_01 (
+    apexlangName: skeleton
+    attribute: 1
+    name: Skeleton
+    type: selectList
+    validation {
+        required: true
+    }
+    appearance {
+        sequence: 10
+        attributeGroup: @sk3Skeleton
+    }
+    default {
+        value: MALE
+    }
+    help {
+        helpText: The skeleton shown first. From Page Item takes it from the patient's record. A saved value remembers the skeleton it was marked on.
+    }
+
+    entry male (
+        sequence: 10
+        display: Male
+        return: MALE
+    )
+
+    entry female (
+        sequence: 20
+        display: Female
+        return: FEMALE
+    )
+
+    entry item (
+        sequence: 30
+        display: From Page Item
+        return: ITEM
+    )
+
+)
+
+customAttribute attribute_02 (
+    apexlangName: sexItem
+    attribute: 2
+    name: Sex Item
+    type: pageItem
+    validation {
+        required: true
+    }
+    appearance {
+        sequence: 20
+        attributeGroup: @sk3Skeleton
+    }
+    dependingOn {
+        attribute: @attribute_01/component
+        conditionType: =
+        value: ITEM
+    }
+    help {
+        helpText: The page item with the patient's sex. M/Male and F/Female select the corresponding model. Missing, U, Other and unrecognized values remain U (unconfirmed), with a warning and sex-specific anatomy unavailable. Use a protected item and authorize the patient on the server.
+    }
+)
+
+customAttribute attribute_03 (
+    apexlangName: options
+    attribute: 3
+    name: Options
+    type: checkboxes
+    appearance {
+        sequence: 30
+        attributeGroup: @sk3Skeleton
+    }
+    default {
+        value: MODE_SWITCH:COMPLAINTS:SEARCH:PAIN:NOTE:SPECIALTY_SWITCH
+    }
+    help {
+        helpText: What users see around the skeleton. APEX model sex is controlled by the configured patient source; the legacy Male / Female Switch option is ignored. Area / Bone Switch shows buttons on the skeleton; Common Complaints are the one-tap buttons (Headache, Back pain ...); Search finds complaints, areas, bones and diagnoses; Pain Score is the 0 to 10 scale and Notes a short text for each marked site.
+    }
+
+    entry sexSwitch (
+        sequence: 10
+        display: Male / Female Switch (legacy, ignored in APEX)
+        return: SEX_SWITCH
+    )
+
+    entry modeSwitch (
+        sequence: 20
+        display: Area / Bone Switch
+        return: MODE_SWITCH
+    )
+
+    entry complaints (
+        sequence: 30
+        display: Common Complaints
+        return: COMPLAINTS
+    )
+
+    entry search (
+        sequence: 40
+        display: Search
+        return: SEARCH
+    )
+
+    entry pain (
+        sequence: 50
+        display: Pain Score
+        return: PAIN
+    )
+
+    entry note (
+        sequence: 60
+        display: Notes
+        return: NOTE
+    )
+
+    entry specialtySwitch (
+        sequence: 70
+        display: Specialty Switch
+        return: SPECIALTY_SWITCH
+    )
+
+)
+
+customAttribute attribute_11 (
+    apexlangName: specialty
+    attribute: 11
+    name: Specialty
+    type: selectList
+    validation {
+        required: true
+    }
+    appearance {
+        sequence: 70
+        attributeGroup: @sk3Skeleton
+    }
+    default {
+        value: ALL
+    }
+    help {
+        helpText: Select the clinical specialty to control visible anatomy, organ choices, search results and common complaints. Turn off Specialty Switch in Options to keep the configured specialty fixed. Existing saved marks remain in the item value when the view changes. The preset does not supply a diagnosis catalog. Use Diagnosis Query for your specialty's coded diagnoses.
+    }
+
+    entry all (
+        sequence: 10
+        display: General Medicine
+        return: ALL
+    )
+    entry ent (
+        sequence: 20
+        display: ENT
+        return: ENT
+    )
+    entry ophthalmology (
+        sequence: 30
+        display: Ophthalmology
+        return: OPHTHALMOLOGY
+    )
+    entry cardiology (
+        sequence: 40
+        display: Cardiology
+        return: CARDIOLOGY
+    )
+    entry urology (
+        sequence: 50
+        display: Urology
+        return: UROLOGY
+    )
+    entry internalMedicine (
+        sequence: 60
+        display: Internal Medicine
+        return: INTERNAL_MEDICINE
+    )
+    entry gastroenterology (
+        sequence: 70
+        display: Gastroenterology
+        return: GASTROENTEROLOGY
+    )
+    entry neurology (
+        sequence: 80
+        display: Neurology
+        return: NEUROLOGY
+    )
+    entry pulmonology (
+        sequence: 90
+        display: Pulmonology
+        return: PULMONOLOGY
+    )
+    entry orthopedics (
+        sequence: 100
+        display: Orthopedics
+        return: ORTHOPEDICS
+    )
+)
+
+customAttribute attribute_12 (
+    apexlangName: anatomyLayer
+    attribute: 12
+    name: Initial View
+    type: selectList
+    validation {
+        required: true
+    }
+    appearance {
+        sequence: 80
+        attributeGroup: @sk3Skeleton
+    }
+    default {
+        value: AUTO
+    }
+    help {
+        helpText: Specialty Default uses the preset's initial view. Anatomy shows organs with a translucent skeleton, Skeleton shows bones, and Organs shows soft tissue. Users can switch views without changing their recorded sites.
+    }
+    entry auto (
+        sequence: 10
+        display: Specialty Default
+        return: AUTO
+    )
+    entry anatomy (
+        sequence: 20
+        display: Anatomy
+        return: ANATOMY
+    )
+    entry skeleton (
+        sequence: 30
+        display: Skeleton
+        return: SKELETON
+    )
+    entry organs (
+        sequence: 40
+        display: Organs
+        return: ORGANS
+    )
+)
+
+customAttribute attribute_04 (
+    apexlangName: selectBy
+    attribute: 4
+    name: Select By
+    type: selectList
+    validation {
+        required: true
+    }
+    appearance {
+        sequence: 40
+        attributeGroup: @sk3Skeleton
+    }
+    default {
+        value: AREA
+    }
+    help {
+        helpText: What a click marks. Area is the easy one - Left knee, Lower back, Chest. Bone marks a single bone, such as the L4 vertebra or the left scaphoid. With the Area / Bone Switch option users can change it.
+    }
+
+    entry area (
+        sequence: 10
+        display: Area
+        return: AREA
+    )
+
+    entry bone (
+        sequence: 20
+        display: Bone
+        return: BONE
+    )
+
+)
+
+customAttribute attribute_05 (
+    apexlangName: height
+    attribute: 5
+    name: Height
+    type: integer
+    validation {
+        required: true
+    }
+    appearance {
+        sequence: 50
+        attributeGroup: @sk3Skeleton
+    }
+    default {
+        value: 560
+    }
+    builder {
+        unit: pixels
+    }
+    help {
+        helpText: Height of the 3D view on wide screens, 320 to 1200. On phones the view takes about 60 percent of the screen height and the list follows below it.
+    }
+)
+
+customAttribute attribute_06 (
+    apexlangName: maxSites
+    attribute: 6
+    name: Maximum Sites
+    type: integer
+    appearance {
+        sequence: 60
+        attributeGroup: @sk3Skeleton
+    }
+    help {
+        helpText: The most areas or bones that can be marked. Empty = no limit.
+    }
+)
+
+customAttribute attribute_07 (
+    apexlangName: diagnosisSuggestions
+    attribute: 7
+    name: Diagnosis Suggestions
+    type: selectList
+    validation {
+        required: true
+    }
+    appearance {
+        sequence: 10
+        attributeGroup: @sk3Diagnoses
+    }
+    default {
+        value: BUILTIN
+    }
+    help {
+        helpText: Show suggestions from the application's shared diagnosis table, or hide them. Diagnoses and complaints are maintained in CA3D_CLINIC_TERMS with anatomy links in CA3D_TERM_AREAS. Every item shares this base. Install @db/install.sql first.
+    }
+
+    entry builtin (
+        sequence: 10
+        display: Enabled - shared diagnosis table
+        return: BUILTIN
+    )
+
+
+    entry none (
+        sequence: 30
+        display: Hidden
+        return: NONE
+    )
+
+)
+
+customAttribute attribute_15 (
+    apexlangName: clinicPermissions
+    attribute: 15
+    name: Clinic Permissions
+    type: checkboxes
+    appearance {
+        sequence: 30
+        attributeGroup: @sk3Clinic
+    }
+    default {
+        value: TERMS
+    }
+    help {
+        helpText: Choose the maintenance actions allowed by Shared Catalog Maintainer Condition. Create enables the visible catalog toolbar; select an anatomical site to add a diagnosis or complaint. Configure examination remains available even when Initial Examination is Off. All doctors can select existing shared terms; only authorized maintainers can add or configure them.
+    }
+    entry option1 (
+        sequence: 10
+        display: Create clinic diagnoses and complaints
+        return: TERMS
+    )
+    entry option2 (
+        sequence: 20
+        display: Configure initial examination
+        return: EXAM_SETUP
+    )
+)
+
+customAttribute attribute_16 (
+    apexlangName: examMode
+    attribute: 16
+    name: Initial Examination
+    type: selectList
+    appearance {
+        sequence: 40
+        attributeGroup: @sk3Clinic
+    }
+    default {
+        value: OFF
+    }
+    help {
+        helpText: A configurable general examination and vital signs. Required mode validates required fields on submission. Deferred assessments require a reason when enabled.
+    }
+    entry option1 (
+        sequence: 10
+        display: Off (current behavior)
+        return: OFF
+    )
+    entry option2 (
+        sequence: 20
+        display: Optional general form
+        return: OPTIONAL
+    )
+    entry option3 (
+        sequence: 30
+        display: Required general form
+        return: REQUIRED
+    )
+)
+
+customAttribute attribute_17 (
+    apexlangName: modelTools
+    attribute: 17
+    name: Anatomy Tools
+    type: checkboxes
+    appearance {
+        sequence: 50
+        attributeGroup: @sk3Clinic
+    }
+    help {
+        helpText: Optional anatomy controls. Individual structures, muscles, nerves and vessels are schematic. No tools are enabled by default.
+    }
+    entry option1 (
+        sequence: 10
+        display: Isolate
+        return: ISOLATE
+    )
+    entry option2 (
+        sequence: 20
+        display: Opacity
+        return: OPACITY
+    )
+    entry option3 (
+        sequence: 30
+        display: Labels
+        return: LABELS
+    )
+    entry option4 (
+        sequence: 40
+        display: Parts
+        return: PARTS
+    )
+    entry option5 (
+        sequence: 50
+        display: Markers
+        return: MARKERS
+    )
+    entry option6 (
+        sequence: 60
+        display: Layers
+        return: LAYERS
+    )
+    entry option7 (
+        sequence: 70
+        display: Certainty
+        return: CERTAINTY
+    )
+    entry option8 (
+        sequence: 80
+        display: Assessment
+        return: ASSESSMENT
+    )
+    entry option9 (
+        sequence: 90
+        display: Undo
+        return: UNDO
+    )
+    entry option10 (
+        sequence: 100
+        display: Export
+        return: EXPORT
+    )
+    entry option11 (
+        sequence: 110
+        display: Section
+        return: SECTION
+    )
+)
+
+customAttribute attribute_19 (
+    apexlangName: clinicMaintainerCondition
+    attribute: 19
+    name: Shared Catalog Maintainer Condition
+    type: plsqlFunctionBodyReturningBoolean
+    appearance {
+        sequence: 70
+        attributeGroup: @sk3Clinic
+    }
+    help {
+        helpText: Server-side PL/SQL function body returning Boolean. Required for shared maintenance. return true; permits any signed-in user with the selected Clinic Permissions. Use a role check for named maintainers, for example return apex_acl.has_user_role(p_application_id => :APP_ID, p_user_name => :APP_USER, p_role_static_id => 'CLINIC_CATALOG_ADMIN'); Checked at render and every shared write. NULL, FALSE, errors or an empty condition deny changes. Attribute 19 is preserved for existing items.
+    }
+)
+
+customAttribute attribute_20 (
+    apexlangName: specialtyItem
+    attribute: 20
+    name: Specialty Page Item
+    type: pageItem
+    appearance {
+        sequence: 90
+        attributeGroup: @sk3Skeleton
+    }
+    help {
+        helpText: Optional page item containing a specialty code such as CARDIOLOGY, ENT or ALL. Its value overrides Specialty on initial render, and changing the page item updates the viewer. A specific specialty constrains saved anatomical areas on the server and hides the specialty switch; ALL supports records spanning specialties. Empty or unknown values use General Medicine.
+    }
+)
+
+customAttribute attribute_21 (
+    apexlangName: patientNameItem
+    attribute: 21
+    name: Name Item (Optional Fallback)
+    type: pageItem
+    appearance {
+        sequence: 150
+        attributeGroup: @sk3Clinic
+    }
+    help {
+        helpText:
+            ```
+            Not required when patient.name is supplied in the patient JSON. Retained for existing integrations: optional fallback page item for the patient name. Used only when patient.name is missing from Patient Data Source. Prefer putting identity and observations together in the single JSON payload. Display & Prefill Options controls visibility and snapshots.
+            ```
+    }
+)
+
+customAttribute attribute_22 (
+    apexlangName: patientMrnItem
+    attribute: 22
+    name: MR Number Item (Optional Fallback)
+    type: pageItem
+    appearance {
+        sequence: 160
+        attributeGroup: @sk3Clinic
+    }
+    help {
+        helpText:
+            ```
+            Not required when patient.mrn is supplied in the patient JSON. Retained for existing integrations: optional fallback page item for the MR number. Used only when patient.mrn is missing from Patient Data Source. Prefer the unified patient JSON payload.
+            ```
+    }
+)
+
+customAttribute attribute_23 (
+    apexlangName: contextSourceItem
+    attribute: 23
+    name: Patient & Observations Item
+    type: pageItem
+    appearance {
+        sequence: 90
+        attributeGroup: @sk3Clinic
+    }
+    help {
+        helpText:
+            ```
+            <p>Select a hidden, textarea or other text item containing plain JSON, populated by SQL, PL/SQL, a Dynamic Action or application code. Changes to the item refresh the summary. This is a display source in APEX; saved patient snapshots and examination prefills require an authorized Static JSON, SQL or PL/SQL source.</p><p><strong>Return one patient JSON object.</strong> Include identity and observations together; omit unused fields. Complete example (fictional):</p><pre>{"patient":{"name":"Demo patient (fictional)","mrn":"DEMO-CA3D-001","id":"DEMO-001","age":42,"sex":"Male","dateOfBirth":"1984-03-10","encounterId":"VISIT-DEMO-001","details":[{"id":"department","label":"Department","value":"General medicine"},{"id":"room","label":"Room","value":"A12"}]},"recording":{"source":"Nursing intake (demo)","recordedBy":"Demo nurse","recordedAt":"2026-11-17T09:15:00+03:00"},"observations":[{"id":"bp_systolic","label":"Systolic BP","value":126,"unit":"mmHg","examField":"bp_systolic"},{"id":"bp_diastolic","label":"Diastolic BP","value":78,"unit":"mmHg","examField":"bp_diastolic"},{"id":"pulse","label":"Pulse","value":82,"unit":"beats/min","examField":"pulse"},{"id":"temperature","label":"Temperature","value":36.8,"unit":"°C","examField":"temperature","readOnly":true},{"id":"weight","label":"Weight","value":72,"unit":"kg","examField":"weight","flag":"Review","highlight":true,"note":"Example review flag supplied by the source."},{"id":"height","label":"Height","value":175,"unit":"cm","examField":"height"},{"id":"spo2","label":"Oxygen saturation","value":98,"unit":"%","examField":"spo2"},{"id":"respiratory_rate","label":"Respiratory rate","value":16,"unit":"breaths/min","examField":"respiratory_rate"},{"id":"bmi","label":"BMI","value":23.5,"unit":"kg/m²"},{"id":"glucose","label":"Blood glucose","value":5.2,"unit":"mmol/L"},{"id":"pain","label":"Pain score","value":2,"unit":"/10"},{"id":"custom_observation","label":"Your custom label","value":"Your supplied value","unit":"","source":"Your source","recordedBy":"Your recorder","recordedAt":"2026-11-17T09:15:00+03:00","flag":"","highlight":false,"readOnly":false,"hidden":true,"note":"Optional note","examField":"your_configured_exam_field"}]}</pre><p>patient: name, mrn, id, age (number in years), sex, dateOfBirth, encounterId, details (custom id/label/value/unit). recording supplies source/recordedBy/recordedAt defaults. observations require unique id and scalar value (text, number, boolean or null). Optional label, unit, flag, highlight, readOnly, hidden, note, examField and recording overrides. Preset IDs and units are in the example; custom IDs/labels are supported. Age is supplied, not calculated.</p><p>Up to 40 observations, 12 patient details and 32767 payload characters. Null/empty values do not prefill. Matching examination fields/units are prefilled only when empty; existing answers/notes/deferrals are preserved. Flags/highlights come from your source; no thresholds or conversions are inferred. Display &amp; Prefill Options controls visibility, locking and saved snapshots.</p>
+            ```
+    }
+    dependingOn {
+        attribute: @attribute_26/component
+        conditionType: =
+        value: ITEM
+    }
+)
+
+customAttribute attribute_24 (
+    apexlangName: contextOptions
+    attribute: 24
+    name: Display & Prefill Options (JSON)
+    type: textarea
+    appearance {
+        sequence: 110
+        attributeGroup: @sk3Clinic
+    }
+    default {
+        value: "{}"
+    }
+    help {
+        helpText:
+            ```
+            <p><strong>These are display and saving settings, not patient values.</strong> Patient values belong in Patient Data Source. Leave <code>{}</code> to use defaults. You do not need to configure this field to show supplied data.</p>
+            <ul><li><code>fields</code>: visible sections/identity keys. Default: all supplied fields. Choices: name, mrn, id, age, sex, dateOfBirth, encounterId, details, observations. details appear in the Details dialog.</li>
+            <li><code>labels</code>: replace identity labels, for example <code>{"mrn":"MRN","encounterId":"Encounter"}</code>.</li>
+            <li><code>observationIds</code>: show only these observation IDs in the summary and Details. Omit to show all supplied observations.</li>
+            <li><code>maxVisibleObservations</code>: 1–12 measurement cards above the viewer; default 6. Matching systolic/diastolic values share one BP card. The Details dialog shows the remaining visible observations without making the page taller.</li>
+            <li><code>prefillExam</code>: default true. Fill empty matching examination fields from observations. False displays values without filling examination answers. Existing values, notes and deferrals are preserved.</li>
+            <li><code>lockPrefilled</code>: default false. True makes all imported examination values read only. A row's readOnly can lock individual values. Notes remain editable.</li>
+            <li><code>patientDataRequired</code>: false by default. True blocks editing/saving if the patient source is unavailable; saved snapshots and prefill history always require server verification.</li><li><code>saveContext</code>: default false. True saves the complete patient/observation snapshot inside the anatomy JSON. Display filters do not remove hidden data from that snapshot. A saved snapshot takes precedence when reopening a record. False omits a new snapshot; prefilled examination answers are still saved, and an existing recorded snapshot is preserved.</li></ul>
+            <p>Use real JSON booleans (<code>true</code>/<code>false</code>), not quoted strings. Unknown options show a configuration message so mistakes can be corrected.</p><h3>Example</h3><pre>{
+              "fields": [
+                "name",
+                "mrn",
+                "age",
+                "sex",
+                "details",
+                "observations"
+              ],
+              "labels": {
+                "mrn": "MRN"
+              },
+              "observationIds": [
+                "bp_systolic",
+                "bp_diastolic",
+                "pulse",
+                "temperature",
+                "weight",
+                "height",
+                "spo2",
+                "respiratory_rate"
+              ],
+              "maxVisibleObservations": 6,
+              "prefillExam": true,
+              "lockPrefilled": false,
+              "saveContext": true
+            }</pre>
+            <p>To show only patient identity, set <code>{"fields":["name","mrn","age"],"prefillExam":false}</code>. To keep defaults and save a snapshot, set <code>{"saveContext":true}</code>.</p>
+            ```
+    }
+)
+
+customAttribute attribute_26 (
+    apexlangName: contextSourceType
+    attribute: 26
+    name: Patient Data Source
+    type: selectList
+    appearance {
+        sequence: 80
+        attributeGroup: @sk3Clinic
+    }
+    default {
+        value: ITEM
+    }
+    help {
+        helpText:
+            ```
+            <p><strong>Choose how to supply patient identity and observations in one JSON object.</strong></p><ul><li>Page Item containing JSON: hidden, textarea or any text item populated by SQL, PL/SQL or a Dynamic Action.</li><li>Static JSON: paste the payload.</li><li>SQL Query returning JSON: zero/one row and one VARCHAR2/CLOB JSON column.</li><li>PL/SQL Function returning JSON: function body returning JSON text/CLOB.</li><li>No live patient source: omit live data; saved snapshots can still display on review.</li></ul><p>Use each source field's Help for the complete JSON or runnable SQL/PLSQL example. All supported patient fields and observations can be supplied by every method. Optional Name/MR fallback items apply only when missing from the payload.</p><p>For SQL/PLSQL, list changing binds in Patient Items to Submit, then run await skeleton3d.get('P402_ANATOMY').refreshContext(); after changes. Clear/load the correct assessment when switching patients; refresh preserves saved data. Use current patient data explicitly replaces an old snapshot with a required amendment reason.</p>
+            ```
+    }
+    entry item (
+        sequence: 10
+        display: Page Item containing JSON
+        return: ITEM
+    )
+    entry json (
+        sequence: 20
+        display: Static JSON
+        return: JSON
+    )
+    entry sql (
+        sequence: 30
+        display: SQL Query returning JSON
+        return: SQL
+    )
+    entry plsql (
+        sequence: 40
+        display: PL/SQL Function returning JSON
+        return: PLSQL
+    )
+    entry none (
+        sequence: 60
+        display: No live patient source
+        return: NONE
+    )
+)
+
+customAttribute attribute_27 (
+    apexlangName: contextJson
+    attribute: 27
+    name: Patient JSON
+    type: textarea
+    appearance {
+        sequence: 90
+        attributeGroup: @sk3Clinic
+    }
+    dependingOn {
+        attribute: @attribute_26/component
+        conditionType: =
+        value: JSON
+    }
+    help {
+        helpText:
+            ```
+            <p>Paste your JSON object here. This uses the same contract as every other patient source.</p><p><strong>Return one patient JSON object.</strong> Include identity and observations together; omit unused fields. Complete example (fictional):</p><pre>{"patient":{"name":"Demo patient (fictional)","mrn":"DEMO-CA3D-001","id":"DEMO-001","age":42,"sex":"Male","dateOfBirth":"1984-03-10","encounterId":"VISIT-DEMO-001","details":[{"id":"department","label":"Department","value":"General medicine"},{"id":"room","label":"Room","value":"A12"}]},"recording":{"source":"Nursing intake (demo)","recordedBy":"Demo nurse","recordedAt":"2026-11-17T09:15:00+03:00"},"observations":[{"id":"bp_systolic","label":"Systolic BP","value":126,"unit":"mmHg","examField":"bp_systolic"},{"id":"bp_diastolic","label":"Diastolic BP","value":78,"unit":"mmHg","examField":"bp_diastolic"},{"id":"pulse","label":"Pulse","value":82,"unit":"beats/min","examField":"pulse"},{"id":"temperature","label":"Temperature","value":36.8,"unit":"°C","examField":"temperature","readOnly":true},{"id":"weight","label":"Weight","value":72,"unit":"kg","examField":"weight","flag":"Review","highlight":true,"note":"Example review flag supplied by the source."},{"id":"height","label":"Height","value":175,"unit":"cm","examField":"height"},{"id":"spo2","label":"Oxygen saturation","value":98,"unit":"%","examField":"spo2"},{"id":"respiratory_rate","label":"Respiratory rate","value":16,"unit":"breaths/min","examField":"respiratory_rate"},{"id":"bmi","label":"BMI","value":23.5,"unit":"kg/m²"},{"id":"glucose","label":"Blood glucose","value":5.2,"unit":"mmol/L"},{"id":"pain","label":"Pain score","value":2,"unit":"/10"},{"id":"custom_observation","label":"Your custom label","value":"Your supplied value","unit":"","source":"Your source","recordedBy":"Your recorder","recordedAt":"2026-11-17T09:15:00+03:00","flag":"","highlight":false,"readOnly":false,"hidden":true,"note":"Optional note","examField":"your_configured_exam_field"}]}</pre><p>patient: name, mrn, id, age (number in years), sex, dateOfBirth, encounterId, details (custom id/label/value/unit). recording supplies source/recordedBy/recordedAt defaults. observations require unique id and scalar value (text, number, boolean or null). Optional label, unit, flag, highlight, readOnly, hidden, note, examField and recording overrides. Preset IDs and units are in the example; custom IDs/labels are supported. Age is supplied, not calculated.</p><p>Up to 40 observations, 12 patient details and 32767 payload characters. Null/empty values do not prefill. Matching examination fields/units are prefilled only when empty; existing answers/notes/deferrals are preserved. Flags/highlights come from your source; no thresholds or conversions are inferred. Display &amp; Prefill Options controls visibility, locking and saved snapshots.</p>
+            ```
+    }
+)
+
+customAttribute attribute_28 (
+    apexlangName: contextQuery
+    attribute: 28
+    name: Patient JSON Query
+    type: sqlQuery
+    appearance {
+        sequence: 90
+        attributeGroup: @sk3Clinic
+    }
+    validation {
+        required: true
+        minColumns: 1
+        maxColumns: 1
+    }
+    dependingOn {
+        attribute: @attribute_26/component
+        conditionType: =
+        value: SQL
+    }
+    help {
+        helpText:
+            ```
+            <p><strong>Return zero/one row, exactly one JSON text column (VARCHAR2 or CLOB).</strong> Zero rows/NULL means no data. Bind page/application items normally; list changing page items in Patient Items to Submit. This runnable fictional example uses P402_PATIENT_NAME and P402_MRN; replace them with your own items or authorized query columns.</p><pre>select json_object(
+              'patient' value json_object(
+                'name' value :P402_PATIENT_NAME, 'mrn' value :P402_MRN,
+                'id' value 'DEMO-001', 'age' value 42, 'sex' value 'Male',
+                'dateOfBirth' value '1984-03-10', 'encounterId' value 'VISIT-DEMO-001',
+                'details' value json_array(json_object('id' value 'department', 'label' value 'Department', 'value' value 'General medicine'))),
+              'recording' value json_object('source' value 'Nursing intake (demo)',
+                'recordedBy' value 'Demo nurse', 'recordedAt' value '2026-11-17T09:15:00+03:00'),
+              'observations' value json_query(q'~[{"id":"bp_systolic","label":"Systolic BP","value":126,"unit":"mmHg","examField":"bp_systolic"},{"id":"bp_diastolic","label":"Diastolic BP","value":78,"unit":"mmHg","examField":"bp_diastolic"},{"id":"pulse","label":"Pulse","value":82,"unit":"beats/min","examField":"pulse"},{"id":"temperature","label":"Temperature","value":36.8,"unit":"°C","examField":"temperature","readOnly":true},{"id":"weight","label":"Weight","value":72,"unit":"kg","examField":"weight","flag":"Review","highlight":true,"note":"Example review flag supplied by the source."},{"id":"height","label":"Height","value":175,"unit":"cm","examField":"height"},{"id":"spo2","label":"Oxygen saturation","value":98,"unit":"%","examField":"spo2"},{"id":"respiratory_rate","label":"Respiratory rate","value":16,"unit":"breaths/min","examField":"respiratory_rate"}]~', '$' returning clob)
+              returning clob) as patient_payload
+            from dual</pre><p>Include any patient/observation keys from Patient JSON / Patient &amp; Observations Item Help. Up to 40 observations, 12 custom patient details, 32767 characters. For AJAX refresh run await skeleton3d.get('P402_ANATOMY').refreshContext();. Clear/load the correct assessment when changing patients.</p>
+            ```
+    }
+)
+
+customAttribute attribute_29 (
+    apexlangName: contextFunction
+    attribute: 29
+    name: Patient JSON Function
+    type: plsqlFunctionBodyReturningVarchar2
+    appearance {
+        sequence: 90
+        attributeGroup: @sk3Clinic
+    }
+    dependingOn {
+        attribute: @attribute_26/component
+        conditionType: =
+        value: PLSQL
+    }
+    help {
+        helpText:
+            ```
+            <p><strong>PL/SQL function body returning one JSON object as text/CLOB.</strong> The same complete patient payload is supported by every source. Page/application item binds work normally. Replace these fictional values and P402 item names with your authorized source.</p><pre>declare
+              l_payload clob;
+            begin
+              select json_object(
+              'patient' value json_object(
+                'name' value :P402_PATIENT_NAME, 'mrn' value :P402_MRN,
+                'id' value 'DEMO-001', 'age' value 42, 'sex' value 'Male',
+                'dateOfBirth' value '1984-03-10', 'encounterId' value 'VISIT-DEMO-001',
+                'details' value json_array(json_object('id' value 'department', 'label' value 'Department', 'value' value 'General medicine'))),
+              'recording' value json_object('source' value 'Nursing intake (demo)',
+                'recordedBy' value 'Demo nurse', 'recordedAt' value '2026-11-17T09:15:00+03:00'),
+              'observations' value json_query(q'~[{"id":"bp_systolic","label":"Systolic BP","value":126,"unit":"mmHg","examField":"bp_systolic"},{"id":"bp_diastolic","label":"Diastolic BP","value":78,"unit":"mmHg","examField":"bp_diastolic"},{"id":"pulse","label":"Pulse","value":82,"unit":"beats/min","examField":"pulse"},{"id":"temperature","label":"Temperature","value":36.8,"unit":"°C","examField":"temperature","readOnly":true},{"id":"weight","label":"Weight","value":72,"unit":"kg","examField":"weight","flag":"Review","highlight":true,"note":"Example review flag supplied by the source."},{"id":"height","label":"Height","value":175,"unit":"cm","examField":"height"},{"id":"spo2","label":"Oxygen saturation","value":98,"unit":"%","examField":"spo2"},{"id":"respiratory_rate","label":"Respiratory rate","value":16,"unit":"breaths/min","examField":"respiratory_rate"}]~', '$' returning clob)
+              returning clob) into l_payload
+            from dual;
+              return l_payload;
+            end;</pre><p>See Patient JSON / Patient &amp; Observations Item Help for every payload field. Limit: 32767 characters. For AJAX refresh, list input items in Patient Items to Submit and run await skeleton3d.get('P402_ANATOMY').refreshContext();. Clear/load the correct assessment before changing patients.</p>
+            ```
+    }
+)
+
+customAttribute attribute_30 (
+    apexlangName: contextItemsToSubmit
+    attribute: 30
+    name: Patient Items to Submit
+    type: pageItems
+    appearance {
+        sequence: 100
+        attributeGroup: @sk3Clinic
+    }
+    help {
+        helpText:
+            ```
+            Comma-separated page items used by the SQL/PLSQL patient source, for example P10_PATIENT_ID,P10_VISIT_ID. These values are submitted during refreshContext(). After changing them, use a Dynamic Action to run await skeleton3d.get('P10_ANATOMY').refreshContext(); Clear or load the correct assessment when switching patients; existing examination answers and saved snapshots are preserved.
+            ```
+    }
+)
+
+customAttribute attribute_25 (
+    apexlangName: selectionGesture
+    attribute: 25
+    name: Select Anatomy On
+    type: selectList
+    appearance {
+        sequence: 100
+        attributeGroup: @sk3Skeleton
+    }
+    default {
+        value: SINGLE
+    }
+    help {
+        helpText: Choose single click/tap or double click/tap to add or open anatomy from the 3D model. Dragging never selects anatomy. Search and anatomy browser buttons remain explicit single-activation actions. Point findings and outline points still use single taps.
+    }
+    entry single (
+        sequence: 10
+        display: Single click or tap
+        return: SINGLE
+    )
+    entry double (
+        sequence: 20
+        display: Double click or tap
+        return: DOUBLE
+    )
+)
+
+customAttribute attribute_31 (
+    apexlangName: patientAuthorization
+    attribute: 31
+    name: Authorize Patient Access
+    type: plsqlFunctionBodyReturningBoolean
+    appearance {
+        sequence: 110
+        attributeGroup: @sk3Clinic
+    }
+    help {
+        helpText: Optional host PL/SQL function body returning BOOLEAN. Runs before every patient source read, including render, AJAX refresh and save validation. False, null or exceptions deny access. Verify the submitted patient and encounter IDs against authenticated server context. The source query must also enforce access.
+    }
+)
+
+customAttribute attribute_32 (
+    apexlangName: viewerTheme
+    attribute: 32
+    name: Viewer Theme
+    type: selectList
+    appearance {
+        sequence: 170
+        attributeGroup: @sk3Skeleton
+    }
+    help {
+        helpText: Follow the APEX page theme by default. System follows the operating system. Users can override and remember appearance per application and item.
+    }
+    default {
+        value: apex
+    }
+    entry option1 (
+        sequence: 10
+        display: APEX page
+        return: apex
+    )
+    entry option2 (
+        sequence: 20
+        display: System
+        return: auto
+    )
+    entry option3 (
+        sequence: 30
+        display: Light
+        return: light
+    )
+    entry option4 (
+        sequence: 40
+        display: Dark
+        return: dark
+    )
+)
+
+customAttribute attribute_33 (
+    apexlangName: viewerColors
+    attribute: 33
+    name: Viewer Colors
+    type: selectList
+    appearance {
+        sequence: 180
+        attributeGroup: @sk3Skeleton
+    }
+    help {
+        helpText: Default viewer colors. User preferences are stored per application and item.
+    }
+    default {
+        value: CLINICAL
+    }
+    entry option1 (
+        sequence: 10
+        display: Clinical
+        return: CLINICAL
+    )
+    entry option2 (
+        sequence: 20
+        display: Neon
+        return: NEON
+    )
+)
+
+customAttribute attribute_34 (
+    apexlangName: neonTint
+    attribute: 34
+    name: Neon Tint
+    type: text
+    appearance {
+        sequence: 190
+        attributeGroup: @sk3Skeleton
+    }
+    help {
+        helpText: Default six-digit hex color, for example #36f5ff.
+    }
+    default {
+        value: "#36f5ff"
+    }
+)

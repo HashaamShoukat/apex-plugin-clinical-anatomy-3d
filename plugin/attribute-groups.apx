@@ -1,0 +1,23 @@
+attributeGroup sk3Skeleton (
+    name: Anatomy
+    sequence: 10
+    advanced {
+        staticId: sk3Skeleton
+    }
+)
+
+attributeGroup sk3Diagnoses (
+    name: Diagnoses
+    sequence: 20
+    advanced {
+        staticId: sk3Diagnoses
+    }
+)
+
+attributeGroup sk3Clinic (
+    name: Clinic Workflow
+    sequence: 30
+    advanced {
+        staticId: sk3Clinic
+    }
+)

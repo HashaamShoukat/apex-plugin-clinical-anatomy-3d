@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {readContext,readContextOptions,PATIENT_PAYLOAD_EXAMPLE} from '../src/patient-contract.js';
+const data=readContext(PATIENT_PAYLOAD_EXAMPLE);
+assert.equal(data.patient.name,'Demo patient (fictional)');
+assert.equal(data.patient.details.length,2);
+assert.equal(data.observations.length,12);
+assert.equal(data.recording.recordedBy,'Demo nurse');
+assert.deepEqual(readContext(JSON.stringify(data)),data);
+assert.equal(readContext({observations:[{id:'pulse',value:80}]}).observations[0].unit,'beats/min');
+assert.equal(readContext({observations:[{id:'missing',value:null},{id:'oxygen',value:false}]}).observations[0].value,null);
+for(const input of [{observations:[{id:'pulse'}]},{observations:[{id:'pulse',value:{nested:1}}]},{patient:{age:'42'}},{patient:{details:[{id:'a',value:1},{id:'a',value:2}]}},{recording:{source:3}},{observations:[{id:'x',value:1,highlight:'true'}]}]) assert.throws(()=>readContext(input));
+for(const input of [{saveContext:'false'},{maxVisibleObservations:0},{fields:['unknown']},{labels:{unknown:'a'}},{typo:true}]) assert.throws(()=>readContextOptions(input));
+assert.deepEqual(readContextOptions('{}'),{});
+assert.equal(readContextOptions({maxVisibleObservations:6,saveContext:false}).saveContext,false);
+console.log('ok   full payload, scalar/null values, presets, limits and display settings contract');

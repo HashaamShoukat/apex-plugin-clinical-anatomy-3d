@@ -1,0 +1,83 @@
+import { chromium } from 'playwright-core';
+import assert from 'node:assert/strict';
+import { pathToFileURL } from 'node:url';
+const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
+const url = pathToFileURL('demo/demo.html').href;
+let count = 0; const check = (name, ok) => { assert.ok(ok, name); count++; console.log('ok   ' + name); };
+try {
+    const page = await browser.newPage({ viewport: { width: 1500, height: 1050 } }); const errors = [];
+    page.on('pageerror', error => errors.push(String(error)));
+    await page.goto(url + '?tools=ALL&exam=OPTIONAL&clinic=MIXED&scope=WORKSPACE' + Date.now());
+    await page.waitForFunction(() => skeleton3d.get('P1_BODY').widget.clinic.loaded);
+    check('specialty, layers and exam share the command bar', await page.locator('.sk3-topbar .sk3-specialty').count() === 1 && await page.locator('.sk3-topbar [data-seg="layer"]').count() === 1 && await page.locator('.sk3-topbar [data-clinic="show-exam"]').isVisible());
+    const beforeWidth = await page.locator('.sk3-stage').evaluate(el => el.clientWidth);
+    const divider = await page.locator('.sk3-divider').boundingBox();
+    await page.mouse.move(divider.x + divider.width / 2, divider.y + 100); await page.mouse.down(); await page.mouse.move(divider.x + 160, divider.y + 100, { steps: 8 }); await page.mouse.up();
+    check('dragging resizes both panels proportionally', await page.locator('.sk3-stage').evaluate(el => el.clientWidth) > beforeWidth + 100);
+    const changedWidth = await page.locator('.sk3-stage').evaluate(el => el.clientWidth);
+    await page.locator('.sk3-divider').focus(); await page.keyboard.press('ArrowLeft');
+    check('divider also supports keyboard resizing', await page.locator('.sk3-stage').evaluate(el => el.clientWidth) < changedWidth);
+    check('layout changes do not create patient data', await page.evaluate(() => skeleton3d.get('P1_BODY').value().sites.length === 0));
+    await page.locator('.sk3-topbar [data-clinic="show-exam"]').click();
+    await page.locator('[data-exam-defer="pulse"]').check();
+    check('deferring a vital sign keeps the popup open', await page.locator('.sk3-exam-dialog').isVisible());
+    await page.locator('[data-exam-note="pulse"]').fill('Measurement unavailable');
+    await page.locator('[data-exam-value="general"][value="NORMAL"]').check();
+    await page.locator('.sk3-exam-dialog').screenshot({ path: 'qa/out/exam-popup-1-2-desktop.png' });
+    await page.setViewportSize({ width: 390, height: 844 });
+    check('popup stays readable at phone width', await page.locator('.sk3-exam-dialog').evaluate(el => el.scrollWidth <= el.clientWidth));
+    await page.locator('.sk3-exam-dialog').screenshot({ path: 'qa/out/exam-popup-1-2-phone.png' });
+    await page.locator('[data-clinic="confirm-exam"]').click();
+    await page.setViewportSize({ width: 1500, height: 1050 });
+    const payload = { v: 2, sex: 'F', sites: [
+        { area: 'KIDNEY', side: 'L', pain: 4, note: 'Follow-up', diagnoses: [], assessment: 'ABNORMAL', markers: [{ id: 'renal', kind: 'POINT', points: [[-.07, 1.04, -.04]], label: 'Renal finding', diagnosis: null }] },
+        { area: 'HEART', diagnoses: [{ code: 'I50.9', label: 'Heart failure, unspecified', system: 'ICD-10' }], assessment: 'NORMAL', markers: [{ id: 'cardiac', kind: 'POINT', points: [[.02, 1.33, .09]], label: 'Cardiac finding', diagnosis: 'ICD-10|I50.9' }] }
+    ] };
+    await page.evaluate(value => skeleton3d.get('P1_BODY').load(value), payload);
+    check('JSON object load restores sex, sites, notes and active selection', await page.evaluate(() => { const a = skeleton3d.get('P1_BODY'); return a.value().sex === 'F' && a.value().sites.length === 2 && a.value().sites[0].note === 'Follow-up' && !!a.widget.active; }));
+    check('saved findings restore visible markers and status coloring', await page.evaluate(() => { const w = skeleton3d.get('P1_BODY').widget; return w.modelTools.markerGroup.children.length > 0 && w.model.meshes.some(m => m.visible && m.userData.area === 'KIDNEY' && m.userData.side === 'L' && m.material.color.getHexString() === 'd93a2c'); }));
+    await page.locator('[data-key="A|HEART|"] [data-model="remove-marker"]').click();
+    check('a finding can be removed from an inactive site', await page.evaluate(() => { const s = skeleton3d.get('P1_BODY').value().sites; return s.find(s => s.area === 'HEART').markers === undefined && s.find(s => s.area === 'KIDNEY').markers.length === 1; }));
+    await page.evaluate(value => skeleton3d.get('P1_BODY').load(JSON.stringify(value)), payload);
+    await page.locator('[data-key="A|HEART|"] [data-act="undx"]').click();
+    check('removing a diagnosis clears its finding link', await page.evaluate(() => skeleton3d.get('P1_BODY').value().sites.find(s => s.area === 'HEART').markers[0].diagnosis === null));
+    await page.locator('[data-key="A|HEART|"] [data-act="open"]').click();
+    await page.locator('[data-model="clear-assessment"]').click();
+    check('finding state can be cleared', await page.evaluate(() => !skeleton3d.get('P1_BODY').value().sites.find(s => s.area === 'HEART').assessment));
+    await page.evaluate(() => skeleton3d.get('P1_BODY').setReadOnly(true));
+    const snapshot = await page.evaluate(() => JSON.stringify(skeleton3d.get('P1_BODY').value()));
+    await page.evaluate(() => { const a = skeleton3d.get('P1_BODY'), w = a.widget; a.select('BRAIN'); a.complaint('HEADACHE'); a.setSex('M'); a.clear(); w.removeSite(w.active); w.modelTools.addMarker(w.sites[0], [[0, 1, 0]], 'POINT'); a.view('back'); });
+    check('read-only mode blocks UI and API data mutations', await page.evaluate(() => JSON.stringify(skeleton3d.get('P1_BODY').value())) === snapshot);
+    check('read-only model shows a review hint', await page.locator('.sk3-hint').innerText().then(text => text.includes('review') && !text.includes('click to mark')));
+    check('read-only finding fields are disabled and remove actions absent', await page.locator('[data-model="remove-marker"]').count() === 0 && await page.locator('[data-marker-label]').first().isDisabled());
+    await page.evaluate(value => { const handlers = {}; window.apex = { item: id => handlers[id] }; apex.item.create = (id, api) => { handlers[id] = api; }; const w = skeleton3d.get('P1_BODY').widget; w.registerItem(); apex.item('P1_BODY').setValue(JSON.stringify(value)); }, payload);
+    check('APEX setValue reloads a saved record while read only', await page.evaluate(() => JSON.parse(apex.item('P1_BODY').getValue()).sites[1].markers[0].label === 'Cardiac finding'));
+    await page.evaluate(() => { const a = skeleton3d.get('P1_BODY'); a.setReadOnly(false); a.view('front'); a.setLayer('ORGANS'); });
+    await page.locator('[data-act="controls"]').click();
+    check('outline completion is hidden in normal selection mode', !await page.locator('[data-model="finish-area"]').isVisible());
+    await page.locator('[data-marker-mode]').selectOption('AREA');
+    check('outline completion explains the minimum point count', await page.locator('[data-model="finish-area"]').isDisabled() && await page.locator('.sk3-draft-status').innerText().then(t => t.includes('3 points')));
+    await page.evaluate(() => { const a = skeleton3d.get('P1_BODY'); a.focus('HEART'); a.setLayer('ORGANS'); });
+    await page.waitForFunction(() => !skeleton3d.get("P1_BODY").widget.anim);
+    await page.locator('.sk3-canvas').scrollIntoViewIfNeeded();
+    const point = await page.evaluate(() => { const w = skeleton3d.get('P1_BODY').widget, m = w.model.meshes.find(m => m.visible && m.userData.area === 'HEART' && !m.userData.detail); m.geometry.computeBoundingBox(); const p = m.geometry.boundingBox.getCenter(m.geometry.boundingBox.min.clone()).applyMatrix4(m.matrixWorld).project(w.camera), r = w.canvas.getBoundingClientRect(); return { x: r.left + (p.x + 1) / 2 * r.width, y: r.top + (1 - p.y) / 2 * r.height }; });
+    for (const [dx, dy] of [[-2, -2], [2, -2], [0, 2]]) { await page.mouse.click(point.x + dx, point.y + dy); }
+    check('three surface points enable outline completion', await page.locator('[data-model="finish-area"]').isEnabled());
+    await page.locator('[data-model="finish-area"]').click();
+    check('finishing records an area finding', await page.evaluate(() => skeleton3d.get('P1_BODY').value().sites.some(s => s.markers?.some(m => m.kind === 'AREA' && m.points.length === 3))));
+    await page.locator('[data-marker-mode]').selectOption('OFF');
+    await page.locator('.sk3-topbar').screenshot({ path: 'qa/out/workspace-toolbar-1-2.png' });
+    await page.screenshot({ path: 'qa/out/workspace-1-2-desktop.png', fullPage: true });
+    await page.evaluate(() => {
+        delete window.apex;
+        const input = document.createElement('input'); input.id = 'P_SPECIALTY'; input.value = 'ENT'; document.body.append(input);
+        document.body.insertAdjacentHTML('beforeend', '<input type="hidden" id="P_BOUND"><div id="P_BOUND_SK3" class="sk3"></div>');
+        skeleton3d.init('P_BOUND', { specialtyItem: 'P_SPECIALTY', readOnly: true });
+    });
+    check('specialty initializes from a page item', await page.evaluate(() => skeleton3d.get('P_BOUND').widget.specialty.id === 'ENT'));
+    await page.evaluate(() => { const e = document.getElementById('P_SPECIALTY'); e.value = 'CARDIOLOGY'; e.dispatchEvent(new Event('change', { bubbles: true })); });
+    await page.evaluate(() => { const a = skeleton3d.get('P_BOUND'); a.setReadOnly(false); a.select('HEART'); });
+    check('initial readonly flag cannot be unlocked by mutation APIs', await page.evaluate(() => skeleton3d.get('P_BOUND').widget.opts.readOnly && skeleton3d.get('P_BOUND').value().sites.length === 0));
+    check('changing the source item updates specialty', await page.evaluate(() => skeleton3d.get('P_BOUND').widget.specialty.id === 'CARDIOLOGY'));
+    check('no browser exceptions', errors.length === 0); console.log(count + ' workspace checks passed');
+} finally { await browser.close(); }

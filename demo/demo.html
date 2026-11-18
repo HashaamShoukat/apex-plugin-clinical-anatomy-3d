@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clinical Anatomy 3D - standalone demo</title>
+<link rel="stylesheet" href="../dist/skeleton3d.css">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<!-- Options: ?specialty=ENT, ?specialty=UROLOGY, ?layer=ORGANS, ?sex=F, ?h=700, ?ro=1, ?v=<saved value> -->
+<div class="card">
+  <h1>Clinical Anatomy 3D · Interactive anatomy</h1>
+  <input type="hidden" id="P1_BODY" value="">
+  <div id="P1_BODY_SK3" class="sk3"></div>
+</div>
+<pre id="out">(the item value appears here)</pre>
+<script src="../dist/skeleton3d.js"></script>
+<script>
+  const q = new URLSearchParams(location.search);
+  const input = document.getElementById("P1_BODY");
+  input.value = q.get("v") || "";
+  skeleton3d.init("P1_BODY", {
+    sex: q.get("sex") || "M",
+    height: Number(q.get("h")) || 600,
+    specialty: q.get("specialty") || "ALL",
+    specialtySwitch: q.get("specialtySwitch") !== "0",
+    layer: q.get("layer") || "AUTO",
+    clinicPermissions: q.get("maintainer") === "1" ? "TERMS:EXAM_SETUP" : "NONE",
+    examMode: q.get("exam") || "OFF",
+    modelTools: q.get("tools") || "",
+    contextData: q.get("context") || null,
+    contextOptions: q.get("contextOptions") || "{}",
+    selectionGesture: q.get("gesture") || "SINGLE",
+    readOnly: q.get("ro") === "1"
+  });
+  const show = () => { document.getElementById("out").textContent = input.value || "(empty)"; };
+  input.addEventListener("change", show);
+  show();
+</script>
+</body>
+</html>

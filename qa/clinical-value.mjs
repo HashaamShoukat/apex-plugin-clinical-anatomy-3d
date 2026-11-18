@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import { GENERAL_EXAM, examErrors, normalizeTerm } from '../src/clinical-value.js';
+const answers = Object.fromEntries(GENERAL_EXAM.fields.filter(f => f.required).map(f => [f.id, { value: f.type === 'assessment' ? 'NORMAL' : f.type === 'select' ? f.options[0].value : 'Reviewed', note: 'Findings and action documented' }]));
+assert.equal(examErrors(GENERAL_EXAM, answers).length, 0);
+assert.ok(examErrors(GENERAL_EXAM, { ...answers, general: { value: 'ABNORMAL' } }).some(e => e.includes('General')));
+assert.ok(examErrors(GENERAL_EXAM, { ...answers, falls: { value: 'RISK_IDENTIFIED' } }).some(e => e.includes('Fall')));
+assert.ok(examErrors(GENERAL_EXAM, { ...answers, falls: { value: 'FORGED' } }).some(e => e.includes('valid selection')));
+assert.ok(examErrors(GENERAL_EXAM, { ...answers, spo2: { value: 101 } }).some(e => e.includes('entry range')));
+assert.ok(examErrors(GENERAL_EXAM, { ...answers, general: { deferred: true, note: '' } }).length);
+assert.equal(examErrors(GENERAL_EXAM, { ...answers, general: { deferred: true, note: 'Patient declined' } }).length, 0);
+assert.deepEqual(normalizeTerm({ source: 'CUSTOM', id: 123, label: 'Local diagnosis', code: 'CL-1', system: 'LOCAL', specialty: 'CARDIOLOGY' }), { source: 'CUSTOM', id: 123, label: 'Local diagnosis', code: 'CL-1', system: 'LOCAL', specialty: 'CARDIOLOGY' });
+assert.equal(normalizeTerm({ source: 'CUSTOM', id: 2, label: 'Legacy term' }).id, 2);
+assert.ok(examErrors(GENERAL_EXAM, { ...answers, pulse: { value: false } }).some(error => error.includes('numeric')));
+assert.ok(examErrors(GENERAL_EXAM, { ...answers, pulse: { value: '72' } }).some(error => error.includes('numeric')));
+assert.ok(examErrors({ fields: [{ id: 'checked', label: 'Consent', type: 'checkbox' }] }, { checked: { value: 'false' } }).length);
+console.log('12 clinical payload and validation checks passed');

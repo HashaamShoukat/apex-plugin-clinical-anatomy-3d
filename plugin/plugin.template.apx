@@ -1,0 +1,55 @@
+plugin skeleton3d (
+    name: Clinical Anatomy 3D
+    staticId: COM.HASHAAM.SKELETON_3D
+    type: item
+    component {
+        supports: [
+            pageItems
+        ]
+        supportsSessionStateDataTypes: [
+            varchar2
+            clob
+        ]
+        standardAttributes: [
+            visibleWidget
+            standardFormElement
+            sessionStateChangeable
+            readOnlyAttr
+            sourceAttrs
+            initJavascriptCodeAttr
+        ]
+    }
+@@SOURCE@@    callbacks {
+        renderProcedureName: @@PREFIX@@render
+        ajaxProcedureName: @@PREFIX@@ajax
+        validationProcedureName: @@PREFIX@@validation
+    }
+    css {
+        fileUrls: #PLUGIN_FILES#css/skeleton3d.min.css?v=@@VERSION@@
+    }
+    javaScript {
+        fileUrls: #PLUGIN_FILES#js/skeleton3d.min.js?v=@@VERSION@@
+    }
+    information {
+        version: @@VERSION@@
+        helpText:
+            ```
+            Interactive procedural anatomy for Oracle APEX. Rotate, zoom and select body areas, organs, bones or individual structures on male/female or sex-unconfirmed models. Ten specialty presets control the visible anatomy, complaints and search results. Anatomy, Skeleton and Organs views preserve recorded selections. These are schematic models, not a complete anatomical atlas.
+
+            Each site can record diagnoses, complaints, pain (0 to 10), notes, finding state, certainty and annotated markers. Diagnoses and complaints use shared CA3D tables, seeded once from the starter catalogue. All items in the application use the same shared base. Added terms use the same tables; EXTERNAL_ID maps local IDs. Optional model tools include anatomy search, isolation, transparency, labels, representative tissue layers, cross-section, undo and PNG export.
+
+            There are no catalogue scopes or clinic modes. Clinic Permissions selects Create clinic diagnoses and complaints and/or Configure initial examination. Shared Catalog Maintainer Condition must return true for maintenance. For example, return true; allows these actions for any signed-in user of the item. Empty, false, null or failing conditions deny maintenance. The condition is rechecked on every write; read-only items hide maintenance.
+
+            A visible Shared clinic catalog toolbar offers Add diagnosis and Add complaint after selecting anatomy. Configure examination is available even when Initial Examination is Off. The add dialog captures name, specialty, optional code and coding system, and can map a term to the selected part. CA3D_CLINIC_CATALOG_V exposes the same stored records for reports and processing.
+
+            The initial examination opens in a popup with Vital signs, Physical examination and Risks and individual needs. Normal/Abnormal use pills. Required examinations block new anatomy selections until complete; deferred fields require a reason. Existing configured forms remain unchanged until a maintainer explicitly saves a replacement. Hospital governance must approve the form and screening tools.
+
+            The item value is JSON: simple sites keep v1; clinical selections use v2. CUSTOM terms return stable table ID, label, code, system and specialty. The host application saves and reloads the patient/visit JSON. Read Only allows reviewing recorded highlights while blocking data editing. Drag the divider to resize model and findings. Specialty Page Item can provide the preset. Use CLOB session state and storage for larger payloads. Run @db/install.sql from the release directory before importing the plugin; it installs callbacks and the clinic API. For basic anatomy with diagnoses, complaints, examination and clinic maintenance all Off, @db/skeleton3d_pkg.sql installs callbacks only. Demo and relational patient storage scripts are optional; see docs/integration-guide.md. Requires APEX 26.1 or later and WebGL for the canvas; search remains available without WebGL. Includes three.js under MIT.
+
+            Viewer appearance offers Clinical and Neon colors, a custom neon tint and APEX page/System/Light/Dark themes. The default follows the APEX page. User choices are remembered per application/item. Appearance changes remain available in read-only review and do not change the patient JSON. Initialization JavaScript can set colorMode to NEON and neonColor to a six-digit hex color.
+
+            JavaScript: skeleton3d.get("P10_BODY_MAP").select("KNEE","L"), complaint("HEADACHE"), value(), clear(), focus("HEART"), setSpecialty("CARDIOLOGY"), setLayer("ORGANS"). Events: Site Marked and Marks Changed. See docs/integration-guide.md and docs/catalog-schema.md for configuration, response examples and report queries.
+            ```
+    }
+
+)
